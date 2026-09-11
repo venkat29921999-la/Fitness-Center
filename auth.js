@@ -44,6 +44,59 @@ document.addEventListener('DOMContentLoaded', () => {
       .join(' ') || 'Member';
   }
 
+  /* ---------- floating label reliability (typing + autofill) ----------
+     Driven with inline !important styles so nothing else in style.css —
+     even another !important rule — can pin the label in place. Wired to
+     every input/keystroke event plus a short poll, so it can't miss
+     manual typing, paste, or delayed browser/password-manager autofill. */
+  function getLabel(input){
+    const group = input.closest('.field-group');
+    return group ? group.querySelector('label:not(.check-terms):not(.check-remember)') : null;
+  }
+  function setImp(el, prop, val){ if(el) el.style.setProperty(prop, val, 'important'); }
+  function floatLabel(label){
+    if(!label) return;
+    setImp(label, 'top', '7px');
+    setImp(label, 'font-size', '.68rem');
+    setImp(label, 'font-weight', '700');
+    setImp(label, 'letter-spacing', '.03em');
+    setImp(label, 'color', 'var(--gold-deep)');
+  }
+  function restLabel(label){
+    if(!label) return;
+    ['top','font-size','font-weight','letter-spacing','color'].forEach(p => label.style.removeProperty(p));
+  }
+  function syncLabelState(input){
+    const label = getLabel(input);
+    const group = input.closest('.field-group');
+    const filled = input.value.trim().length > 0;
+    if(group) group.classList.toggle('has-value', filled);
+    if(filled || document.activeElement === input){
+      floatLabel(label);
+    } else {
+      restLabel(label);
+    }
+  }
+  const authInputs = document.querySelectorAll('.field-group input:not([type="checkbox"])');
+  authInputs.forEach(input => {
+    ['input','keyup','keydown','change','paste','click','focus'].forEach(evt => {
+      input.addEventListener(evt, () => syncLabelState(input));
+    });
+    input.addEventListener('blur', () => syncLabelState(input));
+    // Browser autofill animation hook (Chrome/Edge/Safari)
+    input.addEventListener('animationstart', e => {
+      if(e.animationName === 'onAutoFillStart' || e.animationName === 'onAutoFillCancel'){
+        syncLabelState(input);
+      }
+    });
+  });
+  // Belt-and-suspenders poll: catches autofill/password-manager fills that
+  // land with no event at all, for a few seconds after the page settles.
+
+  [0, 100, 300, 600, 1000, 1500, 2500, 4000].forEach(delay => {
+    setTimeout(() => authInputs.forEach(syncLabelState), delay);
+  });
+
   /* ---------- password show/hide ---------- */
   document.querySelectorAll('.pw-toggle').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -215,6 +268,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const prefill = params.get('email');
     if(prefill){
       loginEmail.value = prefill;
+      syncLabelState(loginEmail);
       const pwField = document.getElementById('loginPassword');
       if(pwField) pwField.focus();
     }

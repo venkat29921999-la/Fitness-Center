@@ -190,10 +190,31 @@
   transition: all .2s ease;
 }
 .field-group input:focus + label,
-.field-group input:not(:placeholder-shown) + label{
+.field-group input:not(:placeholder-shown) + label,
+.field-group input:-webkit-autofill + label,
+.field-group.has-value input + label{
   top: 7px; font-size: .68rem; font-weight: 700; letter-spacing: .03em;
   color: var(--gold-deep);
 }
+
+/* Fix Chrome/Edge autofill: kills the blue/yellow fill and stops it from
+   sitting the typed value under the label instead of moving the label up */
+.field-group input:-webkit-autofill,
+.field-group input:-webkit-autofill:hover,
+.field-group input:-webkit-autofill:focus,
+.field-group input:-webkit-autofill:active{
+  -webkit-text-fill-color: var(--ink);
+  -webkit-box-shadow: 0 0 0 1000px #fff inset;
+  box-shadow: 0 0 0 1000px #fff inset;
+  transition: background-color 9999s ease-in-out 0s;
+  caret-color: var(--ink);
+}
+
+/* Cross-browser autofill detector hook (used by auth.js) */
+@keyframes onAutoFillStart{ from{ opacity: 1; } to{ opacity: 1; } }
+@keyframes onAutoFillCancel{ from{ opacity: 1; } to{ opacity: 1; } }
+.field-group input:-webkit-autofill{ animation-name: onAutoFillStart; }
+.field-group input:not(:-webkit-autofill){ animation-name: onAutoFillCancel; }
 .field-group.invalid input:not([type="checkbox"]){
   border-color: #c0392b;
   animation: fieldShake .4s ease;
