@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Dashboard — Forge Athletic Club</title>
+<meta name="description" content="Forge Athletic Club member dashboard — classes, progress and inbox.">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="auth.css">
+<link rel="stylesheet" href="dashboard.css">
+</head>
+<body class="dash-body" data-role="user">
+
+<div class="dash-overlay" id="dashOverlay"></div>
+
+<div class="dash-shell">
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="dash-sidebar" id="dashSidebar">
+    <button type="button" class="dash-sidebar-close" id="dashSidebarClose" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+    <div class="dash-brand">
+      <a href="index.html" class="auth-logo"><img src="Assests/logo-gold.webp" alt="Forge Athletic Club" class="logo-img"></a>
+    </div>
+
+    <span class="dash-role-badge"><i class="fa-solid fa-user"></i> Member floor</span>
+
+    <nav class="dash-nav">
+      <a href="#overview" class="active"><i class="fa-solid fa-gauge-high"></i> Overview</a>
+      <a href="#classes"><i class="fa-solid fa-calendar-check"></i> My classes</a>
+      <a href="#progress"><i class="fa-solid fa-chart-line"></i> Progress</a>
+      <a href="#billing"><i class="fa-solid fa-credit-card"></i> Billing</a>
+      <a href="#inbox"><i class="fa-solid fa-inbox"></i> Inbox <span class="dash-nav-badge" data-unread-badge data-unread-count>0</span></a>
+      <a href="#settings"><i class="fa-solid fa-gear"></i> Settings</a>
+    </nav>
+
+    <div class="dash-sidebar-foot">
+      <a href="index.html" class="dash-foot-link"><i class="fa-solid fa-house"></i> Back to website</a>
+      <button type="button" class="dash-foot-link dash-logout" data-logout><i class="fa-solid fa-arrow-right-from-bracket"></i> Log out</button>
+    </div>
+  </aside>
+
+  <!-- ============ CONTENT ============ -->
+  <div class="dash-content">
+
+    <!-- Topbar -->
+    <header class="dash-topbar">
+      <button class="dash-menu-btn" id="dashMenuBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
+
+      <div class="dash-search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Search classes, coaches, messages…">
+      </div>
+
+      <div class="dash-topbar-actions">
+        <a href="#inbox" class="dash-bell" aria-label="Notifications">
+          <i class="fa-solid fa-bell"></i>
+          <span class="dash-bell-dot" data-unread-badge></span>
+        </a>
+        <div class="dash-user-menu">
+          <button class="dash-user-btn" id="userMenuBtn">
+            <span class="dash-avatar" data-user-initial>M</span>
+            <span class="dash-user-name" data-user-name>Member</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="dash-user-dropdown" id="userMenu">
+            <p data-user-email>member@forgeathletic.club</p>
+            <button type="button" data-logout><i class="fa-solid fa-arrow-right-from-bracket"></i> Log out</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Overview -->
+    <section id="overview" class="dash-section active">
+      <div class="dash-welcome">
+        <div>
+          <h1>Good to see you, <span data-user-name>Member</span>.</h1>
+          <p data-today>Loading today's date…</p>
+        </div>
+        <img class="dash-welcome-img" src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=400&q=80" alt="Boxing gloves on the Forge floor">
+      </div>
+
+      <div class="stat-grid">
+        <div class="stat-card">
+          <span class="stat-icon"><i class="fa-solid fa-dumbbell"></i></span>
+          <span class="stat-value"><span data-count-to="14">0</span></span>
+          <span class="stat-label">Workouts this month</span>
+          <span class="stat-trend up">+3 vs last month</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-icon"><i class="fa-solid fa-fire"></i></span>
+          <span class="stat-value"><span data-count-to="6">0</span></span>
+          <span class="stat-label">Day streak</span>
+          <span class="stat-trend up">Personal best</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-icon"><i class="fa-solid fa-chart-simple"></i></span>
+          <span class="stat-value"><span data-count-to="8240">0</span></span>
+          <span class="stat-label">Calories, last 30 days</span>
+          <span class="stat-trend">Estimated</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-icon"><i class="fa-solid fa-id-card"></i></span>
+          <span class="stat-value" style="font-size:1.3rem;">Strength</span>
+          <span class="stat-label">Current plan</span>
+          <span class="stat-trend up">Renews Oct 1</span>
+        </div>
+      </div>
+
+      <div class="dash-panel" style="margin-top:20px;">
+        <div class="dash-panel-head">
+          <h2>Up next</h2>
+          <p>Your next booked session on the floor</p>
+        </div>
+        <div class="schedule-list">
+          <div class="schedule-item">
+            <span class="schedule-time">6:00 PM</span>
+            <div class="schedule-info"><strong>Boxing Fundamentals</strong><span>Coach Malik · Main floor · Today</span></div>
+            <span class="schedule-capacity">Booked</span>
+          </div>
+        </div>
+
+        <div class="dash-subhead"><h3>Recent achievements</h3><span>Last 30 days</span></div>
+        <div class="achv-grid">
+          <div class="achv-card"><span class="achv-icon"><i class="fa-solid fa-fire"></i></span><strong>6-day streak</strong><span>Personal best</span></div>
+          <div class="achv-card"><span class="achv-icon"><i class="fa-solid fa-weight-hanging"></i></span><strong>Squat PR</strong><span>+15 lb this month</span></div>
+          <div class="achv-card"><span class="achv-icon"><i class="fa-solid fa-hand-fist"></i></span><strong>10 classes</strong><span>Boxing fundamentals</span></div>
+          <div class="achv-card"><span class="achv-icon"><i class="fa-solid fa-medal"></i></span><strong>Year one</strong><span>Member since 2025</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Classes -->
+    <section id="classes" class="dash-section">
+      <div class="dash-panel">
+        <div class="dash-panel-head">
+          <h2>Upcoming classes</h2>
+          <p>Book your spot on the floor — capped at 18 per session</p>
+        </div>
+        <div class="class-grid">
+          <div class="class-card">
+            <div class="class-card-top"><span class="class-tag">Boxing</span><span class="class-time">Today · 6:00 PM</span></div>
+            <h3>Boxing Fundamentals</h3>
+            <div class="class-coach"><i class="fa-solid fa-whistle"></i> Coach Malik</div>
+            <button type="button" class="book-btn is-booked" data-book-btn><i class="fa-solid fa-circle-check"></i> Booked</button>
+          </div>
+          <div class="class-card">
+            <div class="class-card-top"><span class="class-tag">Strength</span><span class="class-time">Tomorrow · 7:00 AM</span></div>
+            <h3>Strength Block C</h3>
+            <div class="class-coach"><i class="fa-solid fa-whistle"></i> Coach Priya</div>
+            <button type="button" class="book-btn" data-book-btn><i class="fa-solid fa-plus"></i> Book class</button>
+          </div>
+          <div class="class-card">
+            <div class="class-card-top"><span class="class-tag">Recovery</span><span class="class-time">Thu · 6:30 PM</span></div>
+            <h3>Yoga &amp; Recovery</h3>
+            <div class="class-coach"><i class="fa-solid fa-whistle"></i> Coach Elena</div>
+            <button type="button" class="book-btn" data-book-btn><i class="fa-solid fa-plus"></i> Book class</button>
+          </div>
+          <div class="class-card">
+            <div class="class-card-top"><span class="class-tag">Conditioning</span><span class="class-time">Sat · 9:00 AM</span></div>
+            <h3>HIIT Conditioning</h3>
+            <div class="class-coach"><i class="fa-solid fa-whistle"></i> Coach Malik</div>
+            <button type="button" class="book-btn" data-book-btn><i class="fa-solid fa-plus"></i> Book class</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="dash-panel">
+        <div class="dash-panel-head">
+          <h2>Past classes</h2>
+          <p>Your last few sessions on the floor</p>
+        </div>
+        <div class="table-wrap">
+          <table class="dash-table">
+            <thead><tr><th>Class</th><th>Coach</th><th>Date</th><th>Attendance</th></tr></thead>
+            <tbody>
+              <tr><td>Strength Block C</td><td>Coach Priya</td><td>Sep 8, 2026</td><td><span class="status-badge status-active">Attended</span></td></tr>
+              <tr><td>Boxing Fundamentals</td><td>Coach Malik</td><td>Sep 5, 2026</td><td><span class="status-badge status-active">Attended</span></td></tr>
+              <tr><td>Yoga &amp; Recovery</td><td>Coach Elena</td><td>Sep 3, 2026</td><td><span class="status-badge status-paused">Missed</span></td></tr>
+              <tr><td>HIIT Conditioning</td><td>Coach Malik</td><td>Sep 1, 2026</td><td><span class="status-badge status-active">Attended</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Progress -->
+    <section id="progress" class="dash-section">
+      <div class="dash-panel">
+        <div class="dash-panel-head">
+          <h2>Monthly goals</h2>
+          <p>Set by Coach Priya after your last program review</p>
+        </div>
+        <div class="profile-grid">
+          <div class="progress-item">
+            <span class="progress-item-label">Squat</span>
+            <div class="progress-track"><div class="progress-fill" data-value="82"></div></div>
+            <span class="progress-item-value">82%</span>
+          </div>
+          <div class="progress-item">
+            <span class="progress-item-label">Deadlift</span>
+            <div class="progress-track"><div class="progress-fill" data-value="68"></div></div>
+            <span class="progress-item-value">68%</span>
+          </div>
+          <div class="progress-item">
+            <span class="progress-item-label">Conditioning</span>
+            <div class="progress-track"><div class="progress-fill" data-value="91"></div></div>
+            <span class="progress-item-value">91%</span>
+          </div>
+          <div class="progress-item">
+            <span class="progress-item-label">Mobility</span>
+            <div class="progress-track"><div class="progress-fill" data-value="54"></div></div>
+            <span class="progress-item-value">54%</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="dash-panel">
+        <div class="dash-panel-head">
+          <h2>Personal records</h2>
+          <p>Your best numbers, tracked by your coach</p>
+        </div>
+        <div class="table-wrap">
+          <table class="dash-table">
+            <thead><tr><th>Lift</th><th>Best</th><th>Previous</th><th>Set on</th></tr></thead>
+            <tbody>
+              <tr><td>Back Squat</td><td>245 lb</td><td>230 lb</td><td>Aug 30, 2026</td></tr>
+              <tr><td>Deadlift</td><td>315 lb</td><td>300 lb</td><td>Aug 24, 2026</td></tr>
+              <tr><td>Bench Press</td><td>175 lb</td><td>170 lb</td><td>Aug 12, 2026</td></tr>
+              <tr><td>Row (2k)</td><td>7:48</td><td>8:05</td><td>Jul 29, 2026</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Billing -->
+    <section id="billing" class="dash-section">
+      <div class="dash-panel">
+        <div class="dash-panel-head">
+          <h2>Billing</h2>
+          <p>Your plan, payment method and recent receipts</p>
+        </div>
+
+        <div class="plan-card">
+          <div>
+            <div class="plan-card-name">Strength Membership</div>
+            <div class="plan-card-sub">Renews October 1, 2026 · Coached programming included</div>
+          </div>
+          <div class="plan-card-price">$149<span>/month</span></div>
+        </div>
+
+        <div class="payment-row">
+          <div class="payment-card-icon"><i class="fa-solid fa-credit-card"></i></div>
+          <div class="payment-details">
+            <strong>Visa ending in 4821</strong>
+            <span>Expires 09/28</span>
+          </div>
+          <button type="button" class="payment-update-btn" data-update-payment>Update payment method</button>
+        </div>
+
+        <div class="dash-divider"></div>
+
+        <div class="table-wrap">
+          <table class="dash-table">
+            <thead><tr><th>Date</th><th>Description</th><th>Amount</th><th>Status</th></tr></thead>
+            <tbody>
+              <tr><td>Sep 1, 2026</td><td>Strength Membership</td><td>$149.00</td><td><span class="status-badge status-active">Paid</span></td></tr>
+              <tr><td>Aug 1, 2026</td><td>Strength Membership</td><td>$149.00</td><td><span class="status-badge status-active">Paid</span></td></tr>
+              <tr><td>Jul 1, 2026</td><td>Strength Membership</td><td>$149.00</td><td><span class="status-badge status-active">Paid</span></td></tr>
+              <tr><td>Jun 1, 2026</td><td>Strength Membership</td><td>$149.00</td><td><span class="status-badge status-active">Paid</span></td></tr>
+              <tr><td>May 1, 2026</td><td>Strength Membership</td><td>$149.00</td><td><span class="status-badge status-active">Paid</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Inbox -->
+    <section id="inbox" class="dash-section">
+      <div class="dash-panel">
+        <div class="dash-panel-head">
+          <h2>Inbox</h2>
+          <p>Notes from your coach, receipts and floor updates — click a message to open it</p>
+        </div>
+        <div class="inbox-toolbar">
+          <div class="inbox-search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="inboxSearch" placeholder="Search messages…">
+          </div>
+          <div class="inbox-chips" id="inboxChips"></div>
+        </div>
+        <div class="inbox-list" id="inboxList"></div>
+      </div>
+    </section>
+
+    <!-- Settings -->
+    <section id="settings" class="dash-section">
+      <div class="dash-panel">
+        <div class="dash-panel-head">
+          <h2>Account settings</h2>
+          <p>Update your details and notification preferences</p>
+        </div>
+
+        <div class="dash-field">
+          <label for="profileName">Full name</label>
+          <input type="text" id="profileName" placeholder="Your name">
+        </div>
+        <div class="dash-field">
+          <label for="profileEmail">Email address</label>
+          <input type="email" id="profileEmail" placeholder="you@email.com">
+        </div>
+
+        <div class="dash-divider"></div>
+
+        <div class="switch-row">
+          <div>
+            <div class="switch-row-label">Email notifications</div>
+            <div class="switch-row-desc">Receipts, program updates and front-desk notes.</div>
+          </div>
+          <label class="switch"><input type="checkbox" checked><span class="switch-track"></span></label>
+        </div>
+        <div class="switch-row">
+          <div>
+            <div class="switch-row-label">Class reminders</div>
+            <div class="switch-row-desc">A nudge an hour before a class you've booked.</div>
+          </div>
+          <label class="switch"><input type="checkbox" checked><span class="switch-track"></span></label>
+        </div>
+        <div class="switch-row">
+          <div>
+            <div class="switch-row-label">SMS alerts</div>
+            <div class="switch-row-desc">Text messages for last-minute schedule changes.</div>
+          </div>
+          <label class="switch"><input type="checkbox"><span class="switch-track"></span></label>
+        </div>
+
+        <button type="button" class="dash-save-btn" data-save-settings><i class="fa-solid fa-floppy-disk"></i> Save changes</button>
+
+        <div class="dash-subhead"><h3>Security</h3><span></span></div>
+        <div class="switch-row">
+          <div>
+            <div class="switch-row-label">Two-factor authentication</div>
+            <div class="switch-row-desc">Require a code from your phone when logging in.</div>
+          </div>
+          <label class="switch"><input type="checkbox"><span class="switch-track"></span></label>
+        </div>
+        <div class="switch-row">
+          <div>
+            <div class="switch-row-label">Login alerts</div>
+            <div class="switch-row-desc">Email me when my account is opened from a new device.</div>
+          </div>
+          <label class="switch"><input type="checkbox" checked><span class="switch-track"></span></label>
+        </div>
+
+        <div class="danger-panel">
+          <div>
+            <h3>Freeze membership</h3>
+            <p>Pause billing and class access for up to two months a year.</p>
+          </div>
+          <button type="button" class="danger-btn" data-danger-action="This is a demo — your membership was not changed"><i class="fa-solid fa-snowflake"></i> Freeze</button>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+<div class="auth-toast" id="dashToast"></div>
+
+<script src="dashboard.js"></script>
+</body>
+</html>

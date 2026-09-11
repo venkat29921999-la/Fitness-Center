@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Forge — The House Behind the Barbell</title>
+<meta name="description" content="Forge Athletic Club started as one barbell room above a print shop in 2014. Meet the coaches, the floor, and the refusals we still stand by.">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<!-- AOS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- CUSTOM CURSOR -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- PRELOADER -->
+<div class="preloader" id="preloader">
+  <div class="preloader-mark">
+    <span>F</span><span>O</span><span>R</span><span>G</span><span>E</span>
+  </div>
+  <div class="preloader-bar"><div class="preloader-fill" id="preloaderFill"></div></div>
+</div>
+
+<!-- HEADER -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <img src="Assests/logo-gold.webp" alt="Forge Athletic Club" class="logo-img">
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <div class="nav-pill">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link active">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+      <div class="mobile-nav-foot">
+        <a href="#" class="login-link login-link-mobile">Log in</a>
+        <a href="index.html#membership" class="btn btn-gold btn-block">Join Forge</a>
+        <div class="mobile-nav-social">
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="header-actions">
+      <a href="#" class="login-link">Log in</a>
+      <a href="index.html#membership" class="btn btn-gold btn-sm magnetic">Join Forge</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+<div class="nav-overlay" id="navOverlay"></div>
+
+<main id="about-top">
+
+  <!-- ============ 1. ABOUT HERO — curtain reveal + letter-stagger title ============ -->
+  <section class="ab-hero">
+    <div class="ab-hero-media">
+      <span class="ab-curtain ab-curtain-l"></span>
+      <span class="ab-curtain ab-curtain-r"></span>
+      <img class="ab-hero-img" src="Assests/fc5_under_100kb.webp" alt="Forge member lifting a loaded barbell at sunrise on the training floor">
+      <div class="ab-hero-gradient"></div>
+      <div class="hero-grain"></div>
+    </div>
+
+    <div class="ab-hero-badge">
+      <span class="ab-hero-badge-num">2014</span>
+      <span class="ab-hero-badge-txt">Est. on a<br>warehouse floor</span>
+    </div>
+
+    <div class="ab-hero-content">
+      <p class="ab-crumb"><a href="index.html">Home</a><i class="fa-solid fa-chevron-right"></i><span>About</span></p>
+      <h1 class="ab-hero-title" id="abHeroTitle" data-split="The house behind the barbell.">The house behind the barbell.</h1>
+      <p class="ab-hero-sub">Twelve years, one floor, no franchise playbook. This is who built Forge, why it's still small on purpose, and what we refuse to change as it grows.</p>
+      <div class="ab-hero-scroll"><span></span>Meet the house</div>
+    </div>
+  </section>
+
+  <!-- ============ 2. OUR STORY — swipeable / snap horizontal timeline ============ -->
+  <section class="ab-story" id="story">
+    <div class="section-head">
+      <p class="eyebrow" data-aos="fade-up">Twelve years, honestly</p>
+      <h2 data-aos="fade-up" data-aos-delay="100">From one barbell room<br>to a floor of eighteen.</h2>
+      <p class="section-sub" data-aos="fade-up" data-aos-delay="150">Drag, scroll, or use the arrows — the short version of how Forge actually happened.</p>
+    </div>
+
+    <div class="ab-story-wrap" data-aos="fade-up" data-aos-delay="150">
+      <button class="ab-story-nav ab-story-prev" id="abStoryPrev" aria-label="Previous milestone"><i class="fa-solid fa-arrow-left"></i></button>
+
+      <div class="ab-story-track" id="abStoryTrack">
+        <article class="ab-story-item">
+          <span class="ab-story-year">2014</span>
+          <div class="ab-story-img"><img src="Assests/fc7_under_100kb.webp" alt="Empty industrial gym space with hanging bags, representing Forge's first warehouse floor"></div>
+          <h3>One room, above a print shop</h3>
+          <p>Eleven members, a rack of mismatched plates, and a coach who wrote every program by hand.</p>
+        </article>
+        <article class="ab-story-item">
+          <span class="ab-story-year">2017</span>
+          <div class="ab-story-img"><img src="Assests/fc4_under_100kb.webp" alt="Silhouette of a boxer training with hanging bags, representing the ring room opening"></div>
+          <h3>The ring room opens</h3>
+          <p>A licensed corner coach joined, and boxing stopped being a Tuesday-night side project.</p>
+        </article>
+        <article class="ab-story-item">
+          <span class="ab-story-year">2019</span>
+          <div class="ab-story-img"><img src="Assests/fc6_under_100kb.webp" alt="Recovery and mobility class on the studio floor, representing the quiet room opening"></div>
+          <h3>The quiet room, for recovery</h3>
+          <p>We stopped treating mobility as an afterthought and built a room just for it.</p>
+        </article>
+        <article class="ab-story-item">
+          <span class="ab-story-year">2022</span>
+          <div class="ab-story-img"><img src="Assests/fc22.webp" alt="Personal trainer lacing a client's gloves, representing the private coaching floor"></div>
+          <h3>Private coaching gets its own floor</h3>
+          <p>1:1 members stopped sharing rack space with the open-gym crowd during peak hours.</p>
+        </article>
+        <article class="ab-story-item">
+          <span class="ab-story-year">2026</span>
+          <div class="ab-story-img"><img src="Assests/fc8_under_100kb.webp" alt="Athlete deadlifting a loaded barbell in the current strength room"></div>
+          <h3>Eighteen bodies, capped, still</h3>
+          <p>Bigger membership, same cap per session — the number that started this whole approach.</p>
+        </article>
+      </div>
+
+      <button class="ab-story-nav ab-story-next" id="abStoryNext" aria-label="Next milestone"><i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+
+    <div class="ab-story-progress"><div class="ab-story-progress-fill" id="abStoryFill"></div></div>
+  </section>
+
+  <!-- ============ 3. PHILOSOPHY — 3D flip cards ============ -->
+  <section class="ab-values">
+    <div class="ab-values-bg"><img src="Assests/fc7_under_100kb.webp" alt=""></div>
+    <div class="ab-values-inner">
+      <div class="section-head">
+        <p class="eyebrow eyebrow-light" data-aos="fade-up">What actually runs the floor</p>
+        <h2 class="light-heading" data-aos="fade-up" data-aos-delay="100">Four beliefs. Flip each one.</h2>
+      </div>
+
+      <div class="ab-flip-grid">
+        <div class="ab-flip-card" data-aos="fade-up" tabindex="0">
+          <div class="ab-flip-inner">
+            <div class="ab-flip-face ab-flip-front">
+              <i class="fa-solid fa-user-check"></i>
+              <h3>Coached, not crowded</h3>
+              <span class="ab-flip-hint">Tap to flip <i class="fa-solid fa-rotate"></i></span>
+            </div>
+            <div class="ab-flip-face ab-flip-back">
+              <p>Every block on your plan is written by the coach whose name is on it — and they're on the floor when you train it, not managing five rooms at once.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ab-flip-card" data-aos="fade-up" data-aos-delay="100" tabindex="0">
+          <div class="ab-flip-inner">
+            <div class="ab-flip-face ab-flip-front">
+              <i class="fa-solid fa-users-line"></i>
+              <h3>Small, on purpose</h3>
+              <span class="ab-flip-hint">Tap to flip <i class="fa-solid fa-rotate"></i></span>
+            </div>
+            <div class="ab-flip-face ab-flip-back">
+              <p>We stop selling a session slot at eighteen bodies. It caps our revenue on paper and it's the one number we've never moved.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ab-flip-card" data-aos="fade-up" data-aos-delay="200" tabindex="0">
+          <div class="ab-flip-inner">
+            <div class="ab-flip-face ab-flip-front">
+              <i class="fa-solid fa-medal"></i>
+              <h3>Maintained, not just mopped</h3>
+              <span class="ab-flip-hint">Tap to flip <i class="fa-solid fa-rotate"></i></span>
+            </div>
+            <div class="ab-flip-face ab-flip-back">
+              <p>Plates are calibrated quarterly. Platforms get resurfaced before they show it. Rust is a repair ticket, not a personality trait of the gym.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ab-flip-card" data-aos="fade-up" data-aos-delay="300" tabindex="0">
+          <div class="ab-flip-inner">
+            <div class="ab-flip-face ab-flip-front">
+              <i class="fa-solid fa-hourglass-half"></i>
+              <h3>The long game, always</h3>
+              <span class="ab-flip-hint">Tap to flip <i class="fa-solid fa-rotate"></i></span>
+            </div>
+            <div class="ab-flip-face ab-flip-back">
+              <p>Four-week blocks, reviewed against your own numbers. We'd rather you stay seven years than hit a six-week transformation and quit.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 4. LEADERSHIP — sticky stacking cards ============ -->
+  <section class="ab-team">
+    <div class="section-head">
+      <p class="eyebrow" data-aos="fade-up">Who actually runs the house</p>
+      <h2 data-aos="fade-up" data-aos-delay="100">Four people, one floor plan.</h2>
+      <p class="section-sub" data-aos="fade-up" data-aos-delay="150">Scroll — each card stacks on the last, the way the roles built on each other.</p>
+    </div>
+
+    <div class="ab-stack">
+      <article class="ab-stack-card" style="--stack-i:0;">
+        <div class="ab-stack-media"><img src="Assests/fc17_under_100kb.webp" alt="Founder and head coach of Forge Athletic Club lifting a barbell on the floor"></div>
+        <div class="ab-stack-copy">
+          <span class="ab-stack-tag">01 · Founder</span>
+          <h3>Elena Marsh</h3>
+          <p>Opened the first room in 2014 and still writes strength programming personally. Believes a gym should know your name before your card number.</p>
+        </div>
+      </article>
+      <article class="ab-stack-card" style="--stack-i:1;">
+        <div class="ab-stack-media"><img src="Assests/fc18_under_100kb.webp" alt="Head of Strength coaching a member through a heavy set"></div>
+        <div class="ab-stack-copy">
+          <span class="ab-stack-tag">02 · Head of Strength</span>
+          <h3>Marcus Webb</h3>
+          <p>Runs the barbell room's four-week blocks and the calibration schedule nobody notices until it slips — which is the point.</p>
+        </div>
+      </article>
+      <article class="ab-stack-card" style="--stack-i:2;">
+        <div class="ab-stack-media"><img src="Assests/fc3_under_100kb.webp" alt="Director of coaching reviewing a member's training plan"></div>
+        <div class="ab-stack-copy">
+          <span class="ab-stack-tag">03 · Director of Coaching</span>
+          <h3>Renata Silva</h3>
+          <p>Matches every new member to a coach after their movement assessment — and rematches anyone who asks, no questions.</p>
+        </div>
+      </article>
+      <article class="ab-stack-card" style="--stack-i:3;">
+        <div class="ab-stack-media"><img src="Assests/fc12_under_100kb.webp" alt="Front desk lead greeting a member training between brick walls"></div>
+        <div class="ab-stack-copy">
+          <span class="ab-stack-tag">04 · Front Desk Lead</span>
+          <h3>Priya Nair</h3>
+          <p>Keeps the floor cap honest — she's the one who says no when session eighteen is full, even to regulars.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ 5. THE FACILITY — drag compare slider ============ -->
+  <section class="ab-facility">
+    <div class="section-head">
+      <p class="eyebrow" data-aos="fade-up">Same brick, different floor</p>
+      <h2 data-aos="fade-up" data-aos-delay="100">Twelve years on the same walls.</h2>
+      <p class="section-sub" data-aos="fade-up" data-aos-delay="150">Drag the handle — 2014 warehouse shell on the left, today's strength room on the right.</p>
+    </div>
+
+    <div class="ab-compare" id="abCompare" data-aos="zoom-in">
+      <div class="ab-compare-after">
+        <img src="Assests/fc10_under_100kb.webp" alt="Forge's current strength room with training equipment against brick walls">
+        <span class="ab-compare-label ab-compare-label-r">2026 · Now</span>
+      </div>
+      <div class="ab-compare-before" id="abCompareBefore">
+        <img src="Assests/fc6_under_100kb.webp" alt="Bare brick warehouse shell before it became Forge's training floor">
+        <span class="ab-compare-label ab-compare-label-l">2014 · Then</span>
+      </div>
+      <div class="ab-compare-handle" id="abCompareHandle"><i class="fa-solid fa-arrows-left-right"></i></div>
+    </div>
+  </section>
+
+  <!-- ============ 6. IN NUMBERS — animated ring counters ============ -->
+  <section class="ab-numbers">
+    <div class="section-head">
+      <p class="eyebrow" data-aos="fade-up">Printed, not exaggerated</p>
+      <h2 data-aos="fade-up" data-aos-delay="100">The house, in four numbers.</h2>
+    </div>
+
+    <div class="ab-ring-grid">
+      <div class="ab-ring-card" data-aos="fade-up">
+        <svg class="ab-ring" viewBox="0 0 120 120" data-percent="98">
+          <circle class="ab-ring-track" cx="60" cy="60" r="52"></circle>
+          <circle class="ab-ring-fill" cx="60" cy="60" r="52"></circle>
+        </svg>
+        <div class="ab-ring-num"><span class="count" data-count="98">0</span>%</div>
+        <p>Retrain past year one</p>
+      </div>
+      <div class="ab-ring-card" data-aos="fade-up" data-aos-delay="100">
+        <svg class="ab-ring" viewBox="0 0 120 120" data-percent="84">
+          <circle class="ab-ring-track" cx="60" cy="60" r="52"></circle>
+          <circle class="ab-ring-fill" cx="60" cy="60" r="52"></circle>
+        </svg>
+        <div class="ab-ring-num"><span class="count" data-count="4200">0</span></div>
+        <p>Members trained since 2014</p>
+      </div>
+      <div class="ab-ring-card" data-aos="fade-up" data-aos-delay="200">
+        <svg class="ab-ring" viewBox="0 0 120 120" data-percent="65">
+          <circle class="ab-ring-track" cx="60" cy="60" r="52"></circle>
+          <circle class="ab-ring-fill" cx="60" cy="60" r="52"></circle>
+        </svg>
+        <div class="ab-ring-num"><span class="count" data-count="12">0</span></div>
+        <p>Years on this floor</p>
+      </div>
+      <div class="ab-ring-card" data-aos="fade-up" data-aos-delay="300">
+        <svg class="ab-ring" viewBox="0 0 120 120" data-percent="55">
+          <circle class="ab-ring-track" cx="60" cy="60" r="52"></circle>
+          <circle class="ab-ring-fill" cx="60" cy="60" r="52"></circle>
+        </svg>
+        <div class="ab-ring-num"><span class="count" data-count="11">0</span></div>
+        <p>Named head coaches</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 7. CTA — scroll mask-wipe heading ============ -->
+  <section class="ab-cta">
+    <div class="ab-cta-media">
+      <img src="Assests/fc21_under_100kb.webp" alt="Close-up of gym weight plates stacked on the training floor">
+      <div class="hero-grain"></div>
+    </div>
+    <div class="ab-cta-inner">
+      <p class="eyebrow eyebrow-light" data-aos="fade-up">Come see it before you sign anything</p>
+      <h2 class="ab-cta-title" id="abCtaTitle">Come train where<br>this story is still being written.</h2>
+      <div class="ab-cta-actions" data-aos="fade-up" data-aos-delay="150">
+        <a href="index.html#membership" class="btn btn-gold magnetic"><span>See membership</span><i class="fa-solid fa-arrow-right"></i></a>
+        <a href="index.html#contact" class="btn-play magnetic">
+          <span class="btn-play-icon"><i class="fa-solid fa-arrow-right"></i></span>
+          Book a walk-through
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="index.html" class="logo footer-logo">
+        <img src="Assests/logo-gold.webp" alt="Forge Athletic Club" class="logo-img">
+      </a>
+      <p>A private strength, boxing and recovery house — coached, capped, and built to be trained in for years, not months.</p>
+      <div class="contact-social footer-social">
+        <a href="#" class="magnetic"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="magnetic"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="#" class="magnetic"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#" class="magnetic"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#blog">Blog</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Programs</h4>
+      <a href="index.html#services">Strength Training</a>
+      <a href="index.html#services">Boxing &amp; Combat</a>
+      <a href="index.html#services">Yoga &amp; Recovery</a>
+      <a href="index.html#services">HIIT Conditioning</a>
+      <a href="index.html#services">Personal Coaching</a>
+    </div>
+    <div class="footer-col">
+      <h4>Newsletter</h4>
+      <p class="footer-note">One note a month. No spam, no "small tips."</p>
+      <form class="footer-form" onsubmit="return false;">
+        <input type="email" placeholder="Your email">
+        <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2026 Forge Athletic Club. All rights reserved.</p>
+    <div class="footer-legal">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Membership Agreement</a>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top magnetic" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — Forge Athletic Club</title>
+<meta name="description" content="Notes from the Forge floor — strength, boxing, recovery, conditioning and coaching, written by the coaches who program them. Reading, not tips.">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<!-- AOS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- CUSTOM CURSOR -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- PRELOADER -->
+<div class="preloader" id="preloader">
+  <div class="preloader-mark">
+    <span>F</span><span>O</span><span>R</span><span>G</span><span>E</span>
+  </div>
+  <div class="preloader-bar"><div class="preloader-fill" id="preloaderFill"></div></div>
+</div>
+
+<!-- HEADER -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <img src="Assests/logo-gold.webp" alt="Forge Athletic Club" class="logo-img">
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <div class="nav-pill">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="blog.html" class="nav-link active">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+      <div class="mobile-nav-foot">
+        <a href="#" class="login-link login-link-mobile">Log in</a>
+        <a href="index.html#membership" class="btn btn-gold btn-block">Join Forge</a>
+        <div class="mobile-nav-social">
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="header-actions">
+      <a href="#" class="login-link">Log in</a>
+      <a href="index.html#membership" class="btn btn-gold btn-sm magnetic">Join Forge</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+<div class="nav-overlay" id="navOverlay"></div>
+
+<main id="blog-top">
+
+  <!-- ============ 1. BLOG HERO — iris-wipe reveal + split-flap kinetic title ============ -->
+  <section class="bl-hero">
+    <div class="bl-hero-media">
+      <img class="bl-hero-img" src="Assests/fc7_under_100kb.webp" alt="Empty industrial boxing gym with hanging bags at dusk">
+      <div class="bl-hero-gradient"></div>
+      <div class="bl-iris" id="blIris"></div>
+      <div class="hero-grain"></div>
+    </div>
+
+    <div class="bl-hero-tagcloud" id="blTagCloud">
+      <a href="#bl-categories" class="bl-float-tag" data-filter="strength" style="--i:0"><i class="fa-solid fa-dumbbell"></i>Strength</a>
+      <a href="#bl-categories" class="bl-float-tag" data-filter="boxing" style="--i:1"><i class="fa-solid fa-hand-fist"></i>Boxing</a>
+      <a href="#bl-categories" class="bl-float-tag" data-filter="recovery" style="--i:2"><i class="fa-solid fa-spa"></i>Recovery</a>
+      <a href="#bl-categories" class="bl-float-tag" data-filter="conditioning" style="--i:3"><i class="fa-solid fa-fire"></i>Conditioning</a>
+      <a href="#bl-categories" class="bl-float-tag" data-filter="coaching" style="--i:4"><i class="fa-solid fa-whistle"></i>Coaching</a>
+    </div>
+
+    <div class="bl-hero-content">
+      <p class="bl-crumb"><a href="index.html">Home</a><i class="fa-solid fa-chevron-right"></i><span>Blog</span></p>
+      <h1 class="bl-hero-title" id="blHeroTitle" data-text="Notes from the floor.">Notes from the floor.</h1>
+      <p class="bl-hero-sub">Reading, not tips — dated essays written by the coaches who actually program your week, filed after the block, not before the sale.</p>
+
+      <form class="bl-hero-search" id="blHeroSearch" onsubmit="return false;">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="blSearchInput" placeholder="Search a note — try “deload” or “footwork”">
+        <button type="submit"><span>Search</span><i class="fa-solid fa-arrow-right"></i></button>
+        <span class="bl-search-line"></span>
+      </form>
+
+      <div class="bl-hero-scroll"><span></span>Start reading</div>
+    </div>
+  </section>
+
+  <!-- ============ 2. FEATURED — magnetic tilt spotlight card ============ -->
+  <section class="bl-featured" id="bl-featured">
+    <div class="section-head">
+      <p class="eyebrow" data-aos="fade-up">Editor's pick</p>
+      <h2 data-aos="fade-up" data-aos-delay="100">The one worth your coffee.</h2>
+    </div>
+
+    <div class="bl-feat-wrap" data-aos="fade-up" data-aos-delay="150">
+      <a href="#" class="bl-feat-card" id="blFeatCard">
+        <div class="bl-feat-media">
+          <img src="Assests/fc1_under_100kb.webp" alt="Determined athlete lifting a heavy barbell inside Forge's urban strength room">
+          <span class="bl-feat-spotlight" id="blFeatSpot"></span>
+          <span class="bl-feat-tag">Strength · Longread</span>
+        </div>
+        <div class="bl-feat-copy">
+          <span class="bl-feat-kicker">Filed after block 6, not before it</span>
+          <h3>Why we still program in 4-week blocks</h3>
+          <p>Long cycles feel slow until you look at the twelve-month chart. Here's the honest case for patience — and the two weeks every block where members almost always want to quit it.</p>
+
+          <div class="bl-feat-author">
+            <img src="Assests/fc23.webp" alt="Coach Marcus Webb">
+            <div><strong>Marcus Webb</strong><span>Head of Strength · 14 Aug 2026</span></div>
+          </div>
+
+          <div class="bl-feat-stats">
+            <div class="bl-feat-stat" data-aos="fade-up" data-aos-delay="0"><i class="fa-solid fa-clock"></i><span>9 min read</span></div>
+            <div class="bl-feat-stat" data-aos="fade-up" data-aos-delay="100"><i class="fa-solid fa-layer-group"></i><span>Part of a 6-part series</span></div>
+            <div class="bl-feat-stat" data-aos="fade-up" data-aos-delay="200"><i class="fa-solid fa-comments"></i><span>32 coach notes</span></div>
+          </div>
+
+          <span class="bl-feat-more">Read the note <i class="fa-solid fa-arrow-right"></i></span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ 3. CATEGORIES — filter tabs + staggered tilt grid ============ -->
+  <section class="bl-categories" id="bl-categories">
+    <div class="section-head">
+      <p class="eyebrow" data-aos="fade-up">Pick a lane</p>
+      <h2 data-aos="fade-up" data-aos-delay="100">Five lanes, one library.</h2>
+      <p class="section-sub" data-aos="fade-up" data-aos-delay="150">Filter by discipline — every note below is written by the coach who actually runs that room.</p>
+    </div>
+
+    <div class="bl-filters" id="blFilters" data-aos="fade-up" data-aos-delay="150">
+      <button class="bl-filter is-active" data-filter="all">All notes</button>
+      <button class="bl-filter" data-filter="strength">Strength</button>
+      <button class="bl-filter" data-filter="boxing">Boxing</button>
+      <button class="bl-filter" data-filter="recovery">Recovery</button>
+      <button class="bl-filter" data-filter="conditioning">Conditioning</button>
+      <button class="bl-filter" data-filter="coaching">Coaching</button>
+    </div>
+
+    <div class="bl-grid" id="blGrid">
+      <a href="#" class="bl-card" data-category="strength">
+        <div class="bl-card-img"><img src="Assests/fc8_under_100kb.webp" alt="Athlete deadlifting a loaded barbell in the strength room"></div>
+        <div class="bl-card-body">
+          <span class="bl-card-tag">Strength · 6 min</span>
+          <h3>The rep you didn't count still counted</h3>
+          <p>Bar speed drops before form does. What we actually watch for on set four.</p>
+          <span class="bl-card-more">Read <i class="fa-solid fa-arrow-up-right"></i></span>
+        </div>
+      </a>
+
+      <a href="#" class="bl-card" data-category="boxing">
+        <div class="bl-card-img"><img src="Assests/fc9_under_100kb.webp" alt="Boxer training pads with her coach"></div>
+        <div class="bl-card-body">
+          <span class="bl-card-tag">Boxing · 7 min</span>
+          <h3>Footwork before power, always</h3>
+          <p>Why our ring coaches won't let a beginner near the heavy bag in week one.</p>
+          <span class="bl-card-more">Read <i class="fa-solid fa-arrow-up-right"></i></span>
+        </div>
+      </a>
+
+      <a href="#" class="bl-card" data-category="recovery">
+        <div class="bl-card-img"><img src="Assests/fc10_under_100kb.webp" alt="Group recovery and mobility class practising on mats"></div>
+        <div class="bl-card-body">
+          <span class="bl-card-tag">Recovery · 6 min</span>
+          <h3>The rest day is not a cheat day</h3>
+          <p>What actually happens to muscle tissue in the 48 hours after a heavy session.</p>
+          <span class="bl-card-more">Read <i class="fa-solid fa-arrow-up-right"></i></span>
+        </div>
+      </a>
+
+      <a href="#" class="bl-card" data-category="conditioning">
+        <div class="bl-card-img"><img src="Assests/fc11_under_100kb.webp" alt="Athlete on a treadmill during a high intensity conditioning circuit"></div>
+        <div class="bl-card-body">
+          <span class="bl-card-tag">Conditioning · 5 min</span>
+          <h3>Your heart rate is lying to you a little</h3>
+          <p>Why we track effort by breath, not just the number on your wrist.</p>
+          <span class="bl-card-more">Read <i class="fa-solid fa-arrow-up-right"></i></span>
+        </div>
+      </a>
+
+      <a href="#" class="bl-card" data-category="coaching">
+        <div class="bl-card-img"><img src="Assests/fc22.webp" alt="Personal trainer lacing up a client's gloves before a session"></div>
+        <div class="bl-card-body">
+          <span class="bl-card-tag">Coaching · 8 min</span>
+          <h3>A good coach argues with your plan too</h3>
+          <p>Why we review every 1:1 program monthly, even the ones that are "working fine."</p>
+          <span class="bl-card-more">Read <i class="fa-solid fa-arrow-up-right"></i></span>
+        </div>
+      </a>
+
+      <a href="#" class="bl-card" data-category="strength">
+        <div class="bl-card-img"><img src="Assests/fc17_under_100kb.webp" alt="Member lifting a barbell mid-set"></div>
+        <div class="bl-card-body">
+          <span class="bl-card-tag">Strength · 4 min</span>
+          <h3>Why the bar path matters more than the plate count</h3>
+          <p>A crooked bar path costs more strength than a missed meal ever will.</p>
+          <span class="bl-card-more">Read <i class="fa-solid fa-arrow-up-right"></i></span>
+        </div>
+      </a>
+    </div>
+
+    <p class="bl-empty" id="blEmpty">No notes filed in this lane yet — check back after the next block.</p>
+  </section>
+
+  <!-- ============ 4. READING LOG — scroll-drawn vertical timeline ============ -->
+  <section class="bl-log" id="bl-log">
+    <div class="section-head">
+      <p class="eyebrow eyebrow-light" data-aos="fade-up">Dated, not evergreen</p>
+      <h2 class="light-heading" data-aos="fade-up" data-aos-delay="100">A short reading log.</h2>
+      <p class="section-sub" data-aos="fade-up" data-aos-delay="150" style="color:rgba(243,239,231,.62)">Four notes, in the order the floor actually wrote them.</p>
+    </div>
+
+    <div class="bl-log-wrap">
+      <svg class="bl-log-line" id="blLogLine" viewBox="0 0 4 1000" preserveAspectRatio="none">
+        <path id="blLogPath" d="M2,0 L2,1000" />
+      </svg>
+
+      <div class="bl-log-item bl-log-left">
+        <div class="bl-log-dot"></div>
+        <div class="bl-log-card">
+          <div class="bl-log-img"><img src="Assests/fc3_under_100kb.webp" alt="Athlete deadlifting during a strength session"></div>
+          <span class="bl-log-date">14 Aug 2026</span>
+          <h3>Why we still program in 4-week blocks</h3>
+          <p>The case for patience, charted over twelve months.</p>
+        </div>
+      </div>
+
+      <div class="bl-log-item bl-log-right">
+        <div class="bl-log-dot"></div>
+        <div class="bl-log-card">
+          <div class="bl-log-img"><img src="Assests/fc6_under_100kb.webp" alt="Member resting after a heavy training session"></div>
+          <span class="bl-log-date">02 Aug 2026</span>
+          <h3>The rest day is not a cheat day</h3>
+          <p>What tissue actually does in the 48 hours after.</p>
+        </div>
+      </div>
+
+      <div class="bl-log-item bl-log-left">
+        <div class="bl-log-dot"></div>
+        <div class="bl-log-card">
+          <div class="bl-log-img"><img src="Assests/fc21_under_100kb.webp" alt="Close-up of gym equipment weight stack on the training floor"></div>
+          <span class="bl-log-date">22 Jul 2026</span>
+          <h3>The stack doesn't lie, your ego does</h3>
+          <p>A short note on why we calibrate plates every quarter.</p>
+        </div>
+      </div>
+
+      <div class="bl-log-item bl-log-right">
+        <div class="bl-log-dot"></div>
+        <div class="bl-log-card">
+          <div class="bl-log-img"><img src="Assests/fc5_under_100kb.webp" alt="Forge member lifting a loaded barbell at sunrise"></div>
+          <span class="bl-log-date">09 Jul 2026</span>
+          <h3>The 5am floor teaches you something the 6pm one can't</h3>
+          <p>Notes from a month of only training before sunrise.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 5. MORE FROM THE DESK — coverflow drag carousel ============ -->
+  <section class="bl-shelf" id="bl-shelf">
+    <div class="section-head">
+      <p class="eyebrow" data-aos="fade-up">Swipe the shelf</p>
+      <h2 data-aos="fade-up" data-aos-delay="100">More from the desk.</h2>
+    </div>
+
+    <div class="bl-coverflow" id="blCoverflow">
+      <button class="bl-cf-nav bl-cf-prev" id="blCfPrev" aria-label="Previous"><i class="fa-solid fa-arrow-left"></i></button>
+      <div class="bl-cf-track" id="blCfTrack">
+        <div class="bl-cf-card"><img src="Assests/fc18_under_100kb.webp" alt="Member focused during a heavy set"><span class="bl-cf-tag">Strength</span><h4>Chasing a number vs. chasing a pattern</h4></div>
+        <div class="bl-cf-card"><img src="Assests/fc19_under_100kb.webp" alt="Member resting between sets on the gym bench"><span class="bl-cf-tag">Recovery</span><h4>Between sets is where the session is won</h4></div>
+        <div class="bl-cf-card"><img src="Assests/fc3_under_100kb.webp" alt="Athlete on the treadmill during a conditioning session"><span class="bl-cf-tag">Conditioning</span><h4>Zone 2 is boring on purpose</h4></div>
+        <div class="bl-cf-card"><img src="Assests/fc6_under_100kb.webp" alt="Recovery and mobility class on the studio floor"><span class="bl-cf-tag">Recovery</span><h4>Mobility is not a warm-up, it's the work</h4></div>
+        <div class="bl-cf-card"><img src="Assests/fc11_under_100kb.webp" alt="Close-up of stacked weight plates on the rack"><span class="bl-cf-tag">Strength</span><h4>Calibrated plates, no excuses</h4></div>
+      </div>
+      <button class="bl-cf-nav bl-cf-next" id="blCfNext" aria-label="Next"><i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+    <div class="bl-cf-dots" id="blCfDots"></div>
+  </section>
+
+  <!-- ============ 6. AUTHORS — orbiting coach ring ============ -->
+  <section class="bl-authors" id="bl-authors">
+    <div class="section-head">
+      <p class="eyebrow" data-aos="fade-up">Who writes these</p>
+      <h2 data-aos="fade-up" data-aos-delay="100">Five coaches, one shared log.</h2>
+      <p class="section-sub" data-aos="fade-up" data-aos-delay="150">Hover to pause the ring. Tap a coach to read what they file.</p>
+    </div>
+
+    <div class="bl-orbit-wrap" data-aos="fade-up" data-aos-delay="150">
+      <div class="bl-orbit" id="blOrbit">
+        <div class="bl-orbit-center">
+          <span class="bl-orbit-mark">FORGE</span>
+          <small>Desk</small>
+        </div>
+        <div class="bl-orbit-ring" id="blOrbitRing">
+          <button class="bl-sat" style="--ang:0deg" data-name="Marcus Webb" data-role="Head of Strength" data-count="18">
+            <img src="Assests/fc23.webp" alt="Coach Marcus Webb">
+          </button>
+          <button class="bl-sat" style="--ang:72deg" data-name="Renata Silva" data-role="Boxing Lead" data-count="12">
+            <img src="Assests/fc24.webp" alt="Coach Renata Silva">
+          </button>
+          <button class="bl-sat" style="--ang:144deg" data-name="Daniel Ortiz" data-role="Personal Coaching" data-count="9">
+            <img src="Assests/fc25.webp" alt="Coach Daniel Ortiz">
+          </button>
+          <button class="bl-sat" style="--ang:216deg" data-name="Amara Chen" data-role="Recovery Lead" data-count="14">
+            <img src="Assests/fc26.webp" alt="Coach Amara Chen">
+          </button>
+          <button class="bl-sat" style="--ang:288deg" data-name="Priya Nair" data-role="Conditioning Lead" data-count="11">
+            <img src="Assests/fc27.webp" alt="Coach Priya Nair">
+          </button>
+        </div>
+      </div>
+
+      <div class="bl-orbit-detail" id="blOrbitDetail">
+        <img src="Assests/fc23.webp" alt="Selected coach" id="blOrbitDetailImg">
+        <div>
+          <h3 id="blOrbitDetailName">Marcus Webb</h3>
+          <span id="blOrbitDetailRole">Head of Strength</span>
+          <p><strong id="blOrbitDetailCount">18</strong> notes filed on the desk</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 7. NEWSLETTER — typewriter headline + confetti-burst subscribe ============ -->
+  <section class="bl-subscribe" id="bl-subscribe">
+    <div class="bl-sub-bubbles" id="blBubbles"></div>
+    <div class="bl-sub-inner" data-aos="fade-up">
+      <p class="eyebrow eyebrow-light">One note a month</p>
+      <h2 class="light-heading">The desk, in your inbox.<br><span class="bl-typewriter" id="blTypewriter"></span></h2>
+      <p class="bl-sub-desc">No hype, no "5 tips," no NAV-style filler. Just the note, dated, the day a coach actually finishes writing it.</p>
+
+      <form class="bl-sub-form" id="blSubForm">
+        <div class="bl-sub-field">
+          <i class="fa-solid fa-envelope"></i>
+          <input type="email" required placeholder="you@email.com" id="blSubEmail">
+        </div>
+        <button type="submit" class="btn btn-gold magnetic" id="blSubBtn">
+          <span>Subscribe</span><i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </form>
+      <p class="bl-sub-success" id="blSubSuccess"><i class="fa-solid fa-circle-check"></i> You're on the list — first note lands next month.</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="index.html" class="logo footer-logo">
+        <img src="Assests/logo-gold.webp" alt="Forge Athletic Club" class="logo-img">
+      </a>
+      <p>A private strength, boxing and recovery house — coached, capped, and built to be trained in for years, not months.</p>
+      <div class="contact-social footer-social">
+        <a href="#" class="magnetic"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="magnetic"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="#" class="magnetic"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#" class="magnetic"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="blog.html">Blog</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Programs</h4>
+      <a href="services.html">Strength Training</a>
+      <a href="services.html">Boxing &amp; Combat</a>
+      <a href="services.html">Yoga &amp; Recovery</a>
+      <a href="services.html">HIIT Conditioning</a>
+      <a href="services.html">Personal Coaching</a>
+    </div>
+    <div class="footer-col">
+      <h4>Newsletter</h4>
+      <p class="footer-note">One note a month. No spam, no "small tips."</p>
+      <form class="footer-form" onsubmit="return false;">
+        <input type="email" placeholder="Your email">
+        <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2026 Forge Athletic Club. All rights reserved.</p>
+    <div class="footer-legal">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Membership Agreement</a>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top magnetic" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forge Athletic Club — Strength, Built Deliberately</title>
+<meta name="description" content="Forge Athletic Club is a private-membership strength, boxing and conditioning house in the city. Strength training, boxing, yoga recovery and personal coaching.">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<!-- AOS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- CUSTOM CURSOR -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- PRELOADER -->
+<div class="preloader" id="preloader">
+  <div class="preloader-mark">
+    <span>F</span><span>O</span><span>R</span><span>G</span><span>E</span>
+  </div>
+  <div class="preloader-bar"><div class="preloader-fill" id="preloaderFill"></div></div>
+</div>
+
+<!-- HEADER -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <img src="Assests/logo-gold.webp" alt="Stackly" class="logo-img">
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <div class="nav-pill">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+      <div class="mobile-nav-foot">
+        <a href="login.html" class="login-link login-link-mobile">Log in</a>
+        <a href="#" class="btn btn-gold btn-block">Join Forge</a>
+      </div>
+    </nav>
+
+    <div class="header-actions">
+      <a href="login.html" class="login-link">Log in</a>
+      <a href="#" class="btn btn-gold btn-sm magnetic">Join Forge</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+<div class="nav-overlay" id="navOverlay"></div>
+
+<main id="home">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero-media">
+      <img class="hero-slide is-active" src="Assests/fc1_under_100kb.webp" alt="Determined athlete lifting a heavy barbell inside Forge's urban strength room" id="heroImg">
+      <img class="hero-slide" src="Assests/fc2_under_100kb.webp" alt="Member deadlifting a loaded barbell, showcasing strength and form">
+      <img class="hero-slide" src="Assests/fc3_under_100kb.webp" alt="Athlete on the treadmill during a conditioning session">
+      <img class="hero-slide" src="Assests/fc4_under_100kb.webp" alt="Silhouette of a boxer training with hanging bags at dusk">
+      <div class="hero-gradient"></div>
+      <div class="hero-grain"></div>
+    </div>
+
+    <div class="hero-slide-dots" id="heroDots"></div>
+
+    <div class="hero-float-badge" id="heroBadge">
+      <svg viewBox="0 0 100 100"><path id="circlePath" fill="none" d="M 50,50 m -37,0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"/><text><textPath href="#circlePath">MEMBERS ONLY • EST. 2014 • FORGE ATHLETIC •</textPath></text></svg>
+      <span class="hero-float-badge-icon"><i class="fa-solid fa-dumbbell"></i></span>
+    </div>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow" data-anim="hero-line">Private strength &amp; conditioning house</p>
+      <h1 class="hero-title">
+        <span class="line" data-anim="hero-word">Discipline</span>
+        <span class="line" data-anim="hero-word"><em>is</em> the only</span>
+        <span class="line" data-anim="hero-word">membership fee.</span>
+      </h1>
+      <p class="hero-desc" data-anim="hero-line">Strength, boxing, and recovery under one roof — coached, not crowded. Forge is built for people who train like it matters.</p>
+      <div class="hero-cta" data-anim="hero-line">
+        <a href="404.html" class="btn btn-gold magnetic"><span>Claim a floor pass</span><i class="fa-solid fa-arrow-right"></i></a>
+        <a href="404.html">
+  <button class="btn-play magnetic" id="playBtn">
+    <span class="btn-play-icon">
+      <i class="fa-solid fa-play"></i>
+    </span>
+    Watch the house
+  </button>
+</a>
+      </div>
+    </div>
+
+    <div class="hero-stats" data-anim="hero-line">
+      <div class="hero-stat"><span class="count" data-count="4200">0</span><small>Members trained</small></div>
+      <div class="hero-stat"><span class="count" data-count="11">0</span><small>Head coaches</small></div>
+      <div class="hero-stat"><span class="count" data-count="12">0</span><small>Years on the floor</small></div>
+    </div>
+
+    <a href="#about" class="scroll-cue"><span></span>Scroll</a>
+  </section>
+
+  <!-- ============ MARQUEE ============ -->
+  <div class="marquee-strip">
+    <div class="marquee-track">
+      <span>STRENGTH <i class="fa-solid fa-dumbbell"></i></span>
+      <span>BOXING <i class="fa-solid fa-hand-fist"></i></span>
+      <span>CONDITIONING <i class="fa-solid fa-fire"></i></span>
+      <span>RECOVERY <i class="fa-solid fa-spa"></i></span>
+      <span>COACHING <i class="fa-solid fa-whistle"></i></span>
+      <span>STRENGTH <i class="fa-solid fa-dumbbell"></i></span>
+      <span>BOXING <i class="fa-solid fa-hand-fist"></i></span>
+      <span>CONDITIONING <i class="fa-solid fa-fire"></i></span>
+      <span>RECOVERY <i class="fa-solid fa-spa"></i></span>
+      <span>COACHING <i class="fa-solid fa-whistle"></i></span>
+    </div>
+  </div>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="about" id="about">
+    <div class="about-inner">
+      <div class="about-media" data-aos="fade-right" data-aos-duration="900">
+        <div class="about-img-main">
+          <img src="Assests/fc5_under_100kb.webp" alt="Forge member lifting a loaded barbell at sunrise">
+        </div>
+        <div class="about-img-float">
+          <img src="Assests/fc6_under_100kb.webp" alt="Recovery and mobility class on the studio floor">
+        </div>
+        <div class="about-badge-card">
+          <i class="fa-solid fa-heart-pulse"></i>
+          <div><strong>98%</strong><small>retrain past year one</small></div>
+        </div>
+      </div>
+
+      <div class="about-copy">
+        <p class="eyebrow" data-aos="fade-up">Who we are</p>
+        <h2 data-aos="fade-up" data-aos-delay="100">A gym floor run<br>like a craft, not a franchise.</h2>
+        <p class="lead" data-aos="fade-up" data-aos-delay="150">Forge opened as one barbell room above a print shop in 2014. It is still small on purpose — every member is programmed by a coach who knows their name, their numbers, and the shoulder that keeps barking.</p>
+
+        <div class="about-points" data-aos="fade-up" data-aos-delay="200">
+          <div class="about-point">
+            <i class="fa-solid fa-clipboard-check"></i>
+            <div><h4>Coached, not just supervised</h4><p>Every block is written by a coach, reviewed monthly against your numbers.</p></div>
+          </div>
+          <div class="about-point">
+            <i class="fa-solid fa-users-line"></i>
+            <div><h4>Capped floor, always</h4><p>We stop selling a session slot once the floor hits eighteen bodies.</p></div>
+          </div>
+          <div class="about-point">
+            <i class="fa-solid fa-medal"></i>
+            <div><h4>Equipment we actually maintain</h4><p>Calibrated plates, resurfaced platforms, no rust, no excuses.</p></div>
+          </div>
+        </div>
+
+        <div class="about-stats" data-aos="fade-up" data-aos-delay="250">
+          <div><span class="count" data-count="186">0</span><small>Programs written this year</small></div>
+          <div><span class="count" data-count="24">0</span><small>Classes on the weekly board</small></div>
+          <div><span class="count" data-count="7">0</span><small>Average years a member stays</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHY CHOOSE US ============ -->
+  <section class="why">
+    <div class="why-bg">
+      <img src="Assests/fc7_under_100kb.webp" alt="Empty industrial boxing gym with hanging bags at dusk">
+    </div>
+    <div class="why-inner">
+      <p class="eyebrow eyebrow-light" data-aos="fade-up">The Forge standard</p>
+      <h2 class="why-heading" data-aos="fade-up" data-aos-delay="100">Four refusals we still stand by.</h2>
+
+      <div class="why-grid">
+        <div class="why-card" data-aos="fade-up" data-aos-delay="0">
+          <span class="why-num">01</span>
+          <i class="fa-solid fa-user-check"></i>
+          <h3>No ghost coaching</h3>
+          <p>If a coach's name is on your plan, they wrote it — and they're on the floor when you train it.</p>
+        </div>
+        <div class="why-card" data-aos="fade-up" data-aos-delay="100">
+          <span class="why-num">02</span>
+          <i class="fa-solid fa-ban"></i>
+          <h3>No pressure upsells</h3>
+          <p>We won't chase you to a supplement wall. Ask us and we'll tell you plainly, not sell you loudly.</p>
+        </div>
+        <div class="why-card" data-aos="fade-up" data-aos-delay="200">
+          <span class="why-num">03</span>
+          <i class="fa-solid fa-gauge-high"></i>
+          <h3>No overbooked floor</h3>
+          <p>Class sizes are capped and printed on the board — not adjusted quietly when it's convenient.</p>
+        </div>
+        <div class="why-card" data-aos="fade-up" data-aos-delay="300">
+          <span class="why-num">04</span>
+          <i class="fa-solid fa-scale-balanced"></i>
+          <h3>No hidden lock-in</h3>
+          <p>Month-to-month as standard. Annual only if it genuinely saves you money, explained in writing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES / PROGRAMS ============ -->
+  <section class="programs" id="services">
+    <div class="section-head">
+      <p class="eyebrow" data-aos="fade-up">On the weekly board</p>
+      <h2 data-aos="fade-up" data-aos-delay="100">Five disciplines. One membership.</h2>
+      <p class="section-sub" data-aos="fade-up" data-aos-delay="150">Every sleeve below is coached by a named specialist — not a rotating roster of whoever clocked in.</p>
+    </div>
+
+    <div class="program-grid">
+      <a href="404.html" class="program-card tilt-card program-card-lg" data-aos="fade-up">
+        <div class="program-img"><img src="Assests/fc8_under_100kb.webp" alt="Athlete deadlifting a loaded barbell in the strength room"></div>
+        <div class="program-overlay">
+          <span class="program-tag">01 · Barbell room</span>
+          <h3>Strength Training</h3>
+          <p>Squat, press, pull. Programmed in 4-week blocks against your own numbers.</p>
+          <span class="program-more">Explore the sleeve <i class="fa-solid fa-arrow-right"></i></span>
+        </div>
+      </a>
+
+      <a href="404.html" class="program-card tilt-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="program-img"><img src="Assests/fc4_under_100kb.webp" alt="Boxer training pads with her coach"></div>
+        <div class="program-overlay">
+          <span class="program-tag">02 · Ring room</span>
+          <h3>Boxing &amp; Combat</h3>
+          <p>Pad work, bag rounds, footwork drilled by a licensed corner coach.</p>
+          <span class="program-more">Explore the sleeve <i class="fa-solid fa-arrow-right"></i></span>
+        </div>
+      </a>
+
+      <a href="404.html" class="program-card tilt-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="program-img"><img src="Assests/fc10_under_100kb.webp" alt="Group recovery and mobility class practising on mats"></div>
+        <div class="program-overlay">
+          <span class="program-tag">03 · Quiet room</span>
+          <h3>Yoga &amp; Recovery</h3>
+          <p>Mobility, breath work and deload sessions built around your training week.</p>
+          <span class="program-more">Explore the sleeve <i class="fa-solid fa-arrow-right"></i></span>
+        </div>
+      </a>
+
+      <a href="404.html" class="program-card tilt-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="program-img"><img src="https://images.pexels.com/photos/1954524/pexels-photo-1954524.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Athlete on a treadmill during a high intensity conditioning circuit"></div>
+        <div class="program-overlay">
+          <span class="program-tag">04 · Conditioning bay</span>
+          <h3>HIIT Conditioning</h3>
+          <p>Thirty-five minute engine work. Heart-rate tracked, never the same circuit twice.</p>
+          <span class="program-more">Explore the sleeve <i class="fa-solid fa-arrow-right"></i></span>
+        </div>
+      </a>
+
+      <a href="404.html" class="program-card tilt-card program-card-lg" data-aos="fade-up" data-aos-delay="150">
+        <div class="program-img"><img src="Assests/fc3_under_100kb.webp" alt="Personal trainer lacing up a client's gloves before a session"></div>
+        <div class="program-overlay">
+          <span class="program-tag">05 · Private floor</span>
+          <h3>1:1 Personal Coaching</h3>
+          <p>A dedicated coach, a shared log, and a plan that changes when your life does.</p>
+          <span class="program-more">Explore the sleeve <i class="fa-solid fa-arrow-right"></i></span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ TRAINERS ============ -->
+  <section class="trainers">
+    <div class="section-head">
+      <p class="eyebrow" data-aos="fade-up">Named coaches, not a roster</p>
+      <h2 data-aos="fade-up" data-aos-delay="100">The people who write your plan.</h2>
+    </div>
+
+    <div class="trainer-scroll" id="trainerScroll">
+      <div class="trainer-card" data-aos="fade-up">
+        <div class="trainer-img">
+          <img src="Assests/fc12_under_100kb.webp" alt="Coach Marcus Webb, head strength coach">
+          <div class="trainer-social">
+            <a href="404.html"><i class="fa-brands fa-instagram"></i></a>
+            <a href="404.html"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <h3>Marcus Webb</h3>
+        <span>Head of Strength</span>
+      </div>
+
+      <div class="trainer-card" data-aos="fade-up" data-aos-delay="80">
+        <div class="trainer-img">
+          <img src="Assests/fc9_under_100kb.webp" alt="Coach Renata Silva, boxing lead">
+          <div class="trainer-social">
+            <a href="404.html"><i class="fa-brands fa-instagram"></i></a>
+            <a href="404.html"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <h3>Renata Silva</h3>
+        <span>Boxing Lead</span>
+      </div>
+
+      <div class="trainer-card" data-aos="fade-up" data-aos-delay="160">
+        <div class="trainer-img">
+          <img src="Assests/fc13_under_100kb.webp" alt="Coach Daniel Ortiz, personal coaching">
+          <div class="trainer-social">
+            <a href="404.html"><i class="fa-brands fa-instagram"></i></a>
+            <a href="404.html"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <h3>Daniel Ortiz</h3>
+        <span>Personal Coaching</span>
+      </div>
+
+      <div class="trainer-card" data-aos="fade-up" data-aos-delay="240">
+        <div class="trainer-img">
+          <img src="Assests/fc14_under_100kb.webp" alt="Coach Amara Chen, recovery and mobility lead">
+          <div class="trainer-social">
+            <a href="404.html"><i class="fa-brands fa-instagram"></i></a>
+            <a href="404.html"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <h3>Amara Chen</h3>
+        <span>Recovery Lead</span>
+      </div>
+
+      <div class="trainer-card" data-aos="fade-up" data-aos-delay="320">
+        <div class="trainer-img">
+          <img src="Assests/fc15_under_100kb.webp" alt="Coach Priya Nair, conditioning lead">
+          <div class="trainer-social">
+            <a href="404.html"><i class="fa-brands fa-instagram"></i></a>
+            <a href="404.html"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <h3>Priya Nair</h3>
+        <span>Conditioning Lead</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GALLERY ============ -->
+  <section class="gallery">
+    <div class="section-head">
+      <p class="eyebrow" data-aos="fade-up">Inside the house</p>
+      <h2 data-aos="fade-up" data-aos-delay="100">A floor built for the work.</h2>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gallery-item gi-1" data-aos="zoom-in"><img src="Assests/fc10_under_100kb.webp" alt="Member lifting weights against a brick wall"></div>
+      <div class="gallery-item gi-2" data-aos="zoom-in" data-aos-delay="80"><img src="Assests/fc4_under_100kb.webp" alt="Close-up of stacked weight plates on the rack"></div>
+      <div class="gallery-item gi-3" data-aos="zoom-in" data-aos-delay="160"><img src="Assests/fc3_under_100kb.webp" alt="Athlete training between brick walls in the strength room"></div>
+      <div class="gallery-item gi-4" data-aos="zoom-in" data-aos-delay="240"><img src="Assests/fc17_under_100kb.webp" alt="Member lifting a barbell mid-set"></div>
+      <div class="gallery-item gi-5" data-aos="zoom-in"><img src="Assests/fc18_under_100kb.webp" alt="Member focused during a heavy set"></div>
+      <div class="gallery-item gi-6" data-aos="zoom-in" data-aos-delay="80"><img src="Assests/fc22.webp" alt="Member resting between sets on the gym bench"></div>
+    </div>
+  </section>
+
+  <!-- ============ MEMBERSHIP ============ -->
+  <section class="membership" id="membership">
+    <div class="section-head">
+      <p class="eyebrow" data-aos="fade-up">Printed next to the promise</p>
+      <h2 data-aos="fade-up" data-aos-delay="100">Membership, three ways.</h2>
+      <p class="section-sub" data-aos="fade-up" data-aos-delay="150">No joining fee hidden in fine print. Cancel with thirty days' notice, any tier.</p>
+    </div>
+
+    <div class="plans">
+      <div class="plan-card" data-aos="fade-up">
+        <h3>Floor</h3>
+        <p class="plan-desc">Open-gym access to the strength room and conditioning bay.</p>
+        <div class="plan-price"><span>$59</span>/mo</div>
+        <ul>
+          <li><i class="fa-solid fa-check"></i>Unlimited open-gym hours</li>
+          <li><i class="fa-solid fa-check"></i>Strength &amp; conditioning bay</li>
+          <li><i class="fa-solid fa-check"></i>Locker &amp; towel service</li>
+          <li class="off"><i class="fa-solid fa-xmark"></i>Coached group classes</li>
+          <li class="off"><i class="fa-solid fa-xmark"></i>1:1 coaching credits</li>
+        </ul>
+        <a href="404.html" class="btn btn-gold-outline btn-block magnetic">Choose Floor</a>
+      </div>
+
+      <div class="plan-card plan-featured" data-aos="fade-up" data-aos-delay="100">
+        <span class="plan-badge">Most joined</span>
+        <h3>Coached</h3>
+        <p class="plan-desc">Everything on Floor, plus every class on the weekly board.</p>
+        <div class="plan-price"><span>$119</span>/mo</div>
+        <ul>
+          <li><i class="fa-solid fa-check"></i>Unlimited open-gym hours</li>
+          <li><i class="fa-solid fa-check"></i>All group classes, all disciplines</li>
+          <li><i class="fa-solid fa-check"></i>Monthly programming review</li>
+          <li><i class="fa-solid fa-check"></i>Recovery &amp; mobility sessions</li>
+          <li class="off"><i class="fa-solid fa-xmark"></i>1:1 coaching credits</li>
+        </ul>
+        <a href="404.html" class="btn btn-gold btn-block magnetic">Choose Coached</a>
+      </div>
+
+      <div class="plan-card" data-aos="fade-up" data-aos-delay="200">
+        <h3>Private</h3>
+        <p class="plan-desc">A dedicated coach and four 1:1 sessions built into the month.</p>
+        <div class="plan-price"><span>$249</span>/mo</div>
+        <ul>
+          <li><i class="fa-solid fa-check"></i>Everything in Coached</li>
+          <li><i class="fa-solid fa-check"></i>4 private sessions monthly</li>
+          <li><i class="fa-solid fa-check"></i>Direct coach messaging</li>
+          <li><i class="fa-solid fa-check"></i>Quarterly assessment &amp; reset</li>
+          <li><i class="fa-solid fa-check"></i>Priority class booking</li>
+        </ul>
+        <a href="404.html" class="btn btn-gold-outline btn-block magnetic">Choose Private</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <section class="testimonials">
+    <div class="section-head">
+      <p class="eyebrow eyebrow-light" data-aos="fade-up">Filed after the month, not the win</p>
+      <h2 class="light-heading" data-aos="fade-up" data-aos-delay="100">What members leave on record.</h2>
+    </div>
+
+    <div class="testi-slider" data-aos="fade-up" data-aos-delay="150">
+      <div class="testi-track" id="testiTrack">
+        <div class="testi-card">
+          <i class="fa-solid fa-quote-left"></i>
+          <p>"My coach caught a form break in my deadlift that two other gyms missed for years. That's the whole membership, honestly."</p>
+          <div class="testi-person"><strong>Jordan Reyes</strong><span>Coached member · 2 years</span></div>
+        </div>
+        <div class="testi-card">
+          <i class="fa-solid fa-quote-left"></i>
+          <p>"The floor never feels crowded. I've never waited for a rack, not once, not even at 6pm on a Monday."</p>
+          <div class="testi-person"><strong>Aisha Bello</strong><span>Floor member · 3 years</span></div>
+        </div>
+        <div class="testi-card">
+          <i class="fa-solid fa-quote-left"></i>
+          <p>"I came in after a shoulder surgery. The private sessions were rebuilt around my physio notes, not a generic template."</p>
+          <div class="testi-person"><strong>Marco Diaz</strong><span>Private member · 1 year</span></div>
+        </div>
+      </div>
+      <div class="testi-controls">
+        <button id="testiPrev" aria-label="Previous testimonial"><i class="fa-solid fa-arrow-left"></i></button>
+        <div class="testi-dots" id="testiDots"></div>
+        <button id="testiNext" aria-label="Next testimonial"><i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BLOG ============ -->
+  <section class="blog" id="blog">
+    <div class="section-head">
+      <p class="eyebrow" data-aos="fade-up">Notes from the floor</p>
+      <h2 data-aos="fade-up" data-aos-delay="100">Reading, not tips.</h2>
+    </div>
+
+    <div class="blog-grid">
+      <a href="404.html" class="blog-card" data-aos="fade-up">
+        <div class="blog-img"><img src="Assests/fc20_under_100kb.webp" alt="Athlete deadlifting during a strength session"></div>
+        <div class="blog-body">
+          <span class="blog-tag">Strength · 9 min</span>
+          <h3>Why we still program in 4-week blocks</h3>
+          <p>Long cycles feel slow until you look at the twelve-month chart. Here's the case for patience.</p>
+          <span class="blog-more">Read the note <i class="fa-solid fa-arrow-right"></i></span>
+        </div>
+      </a>
+      <a href="404.html" class="blog-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="blog-img"><img src="Assests/fc18_under_100kb.webp" alt="Member resting after a heavy training session"></div>
+        <div class="blog-body">
+          <span class="blog-tag">Recovery · 6 min</span>
+          <h3>The rest day is not a cheat day</h3>
+          <p>What actually happens to muscle tissue in the 48 hours after a heavy session.</p>
+          <span class="blog-more">Read the note <i class="fa-solid fa-arrow-right"></i></span>
+        </div>
+      </a>
+      <a href="404.html" class="blog-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="blog-img"><img src="Assests/fc7_under_100kb.webp" alt="Empty boxing gym floor at dusk"></div>
+        <div class="blog-body">
+          <span class="blog-tag">Boxing · 7 min</span>
+          <h3>Footwork before power, always</h3>
+          <p>Why our ring coaches won't let a beginner near the heavy bag in week one.</p>
+          <span class="blog-more">Read the note <i class="fa-solid fa-arrow-right"></i></span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="faq">
+    <div class="faq-inner">
+      <div class="faq-head">
+        <p class="eyebrow" data-aos="fade-up">Before you ask at the desk</p>
+        <h2 data-aos="fade-up" data-aos-delay="100">Five straight answers.</h2>
+        <p class="section-sub" data-aos="fade-up" data-aos-delay="150">Still curious? <a href="#contact">Write the front desk</a> — a person answers, not a bot.</p>
+      </div>
+      <div class="faq-list" data-aos="fade-up" data-aos-delay="200">
+        <div class="faq-item active">
+          <button class="faq-q">Do I need to be experienced to join?<i class="fa-solid fa-chevron-down"></i></button>
+          <div class="faq-a"><p>No. Every new member sits a 45-minute movement assessment before their first program is written, regardless of history.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Is there a joining fee?<i class="fa-solid fa-chevron-down"></i></button>
+          <div class="faq-a"><p>No hidden joining fee. The price on the plan card is the price you pay in month one.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Can I freeze my membership?<i class="fa-solid fa-chevron-down"></i></button>
+          <div class="faq-a"><p>Yes — up to two months a year for travel or injury, arranged directly with the front desk.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">What if I want to switch coaches?<i class="fa-solid fa-chevron-down"></i></button>
+          <div class="faq-a"><p>Say the word. Coach fit matters more than loyalty to us — we'll rematch you within the week.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Do you offer day passes?<i class="fa-solid fa-chevron-down"></i></button>
+          <div class="faq-a"><p>Yes, a single floor pass is $25 and applies toward your first month if you join within a week.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="contact" id="contact">
+    <div class="contact-inner">
+      <div class="contact-info" data-aos="fade-right">
+        <p class="eyebrow eyebrow-light" data-aos="fade-up">Write the front desk</p>
+        <h2 class="light-heading">Come see the floor<br>before you sign anything.</h2>
+        <p class="contact-lead">Book a walk-through. No pressure, no pitch deck — just the room, the racks, and a coach who'll answer straight.</p>
+
+        <div class="contact-detail"><i class="fa-solid fa-location-dot"></i><div><strong>Visit</strong><span>412 Foundry Lane, Warehouse District</span></div></div>
+        <div class="contact-detail"><i class="fa-solid fa-phone"></i><div><strong>Call</strong><span>+1 (555) 014‑7732</span></div></div>
+        <div class="contact-detail"><i class="fa-solid fa-envelope"></i><div><strong>Email</strong><span>floor@forgeathletic.club</span></div></div>
+        <div class="contact-detail"><i class="fa-solid fa-clock"></i><div><strong>Open</strong><span>Mon–Fri 05:00–22:00 · Sat–Sun 07:00–18:00</span></div></div>
+
+        <div class="contact-social">
+          <a href="404.html" class="magnetic"><i class="fa-brands fa-instagram"></i></a>
+          <a href="404.html" class="magnetic"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="404.html" class="magnetic"><i class="fa-brands fa-youtube"></i></a>
+          <a href="404.html" class="magnetic"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <form class="contact-form" data-aos="fade-left" id="ctForm">
+        <div class="form-row">
+          <div class="form-field">
+            <label>Full name</label>
+            <input type="text" name="fullName" required placeholder="Your name">
+          </div>
+          <div class="form-field">
+            <label>Phone</label>
+            <input type="tel" name="phone" required placeholder="+1 (___) ___-____">
+          </div>
+        </div>
+        <div class="form-field">
+          <label>Email</label>
+          <input type="email" name="email" required placeholder="you@email.com">
+        </div>
+        <div class="form-field">
+          <label>Which discipline?</label>
+          <select name="discipline" required>
+            <option value="">Select one</option>
+            <option>Strength Training</option>
+            <option>Boxing & Combat</option>
+            <option>Yoga & Recovery</option>
+            <option>HIIT Conditioning</option>
+            <option>1:1 Personal Coaching</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label>Tell us about your goal</label>
+          <textarea name="goal" rows="4" placeholder="What are you training for?"></textarea>
+        </div>
+        <button type="submit" class="btn btn-gold btn-block magnetic" id="ctSubmit">
+          <span id="formBtnText">Book a walk-through</span><i class="fa-solid fa-arrow-right"></i>
+        </button>
+        <p class="form-success" id="ctFormSuccess"><i class="fa-solid fa-circle-check"></i> Request received — the front desk will call within one business day.</p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="#home" class="logo footer-logo">
+        <img src="Assests/logo-gold.webp" alt="Stackly" class="logo-img">
+      </a>
+      <p>A private strength, boxing and recovery house — coached, capped, and built to be trained in for years, not months.</p>
+      <div class="contact-social footer-social">
+        <a href="404.html" class="magnetic"><i class="fa-brands fa-instagram"></i></a>
+        <a href="404.html" class="magnetic"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="404.html" class="magnetic"><i class="fa-brands fa-youtube"></i></a>
+        <a href="404.html" class="magnetic"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Programs</h4>
+      <a href="404.html">Strength Training</a>
+      <a href="404.html">Boxing &amp; Combat</a>
+      <a href="404.html">Yoga &amp; Recovery</a>
+      <a href="404.html">HIIT Conditioning</a>
+      <a href="404.html">Personal Coaching</a>
+    </div>
+    <div class="footer-col">
+      <h4>Newsletter</h4>
+      <p class="footer-note">One note a month. No spam, no "small tips."</p>
+      <form class="footer-form" onsubmit="return false;">
+        <input type="email" placeholder="Your email">
+        <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2026 Forge Athletic Club. All rights reserved.</p>
+    <div class="footer-legal">
+      <a href="404.html">Privacy</a>
+      <a href="404.html">Terms</a>
+      <a href="404.html">Membership Agreement</a>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top magnetic" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<!-- Video modal -->
+<!-- <div class="video-modal" id="videoModal">
+  <div class="video-modal-inner">
+    <button class="video-close" id="videoClose"><i class="fa-solid fa-xmark"></i></button>
+    <div class="video-frame">
+      <img src="Assests/fc21_under_100kb.webp" alt="Close-up of gym equipment weight stack on the training floor">
+      <div class="video-frame-caption"><i class="fa-solid fa-circle-info"></i> Demo preview — full house tour plays here on the live site.</div>
+    </div>
+  </div>
+</div> -->
+
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

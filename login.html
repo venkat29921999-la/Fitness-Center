@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Log In — Forge Athletic Club</title>
+<meta name="description" content="Log in to your Forge Athletic Club member or admin dashboard.">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="auth.css">
+</head>
+<body class="auth-page">
+
+<a href="index.html" class="back-home-btn"><i class="fa-solid fa-arrow-left"></i><span>Back to home</span></a>
+<div class="auth-toast" id="authToast"></div>
+
+<div class="auth-shell">
+
+  <div class="auth-visual">
+    <img class="auth-visual-img" src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1400&q=80" alt="Member lifting a loaded barbell inside Forge's strength room">
+    <div class="auth-visual-overlay"></div>
+    <div class="auth-visual-content">
+      <a href="index.html" class="auth-logo"><img src="Assests/logo-gold.webp" alt="Forge Athletic Club" class="logo-img"></a>
+
+      <div class="auth-visual-badge">
+        <svg viewBox="0 0 100 100"><path id="loginCirclePath" fill="none" d="M 50,50 m -37,0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"/><text><textPath href="#loginCirclePath">MEMBERS ONLY • EST. 2014 • FORGE ATHLETIC •</textPath></text></svg>
+        <span class="auth-visual-badge-icon"><i class="fa-solid fa-dumbbell"></i></span>
+      </div>
+
+      <blockquote class="auth-quote">"Discipline is the only membership fee."<cite>— The Forge floor rule</cite></blockquote>
+
+      <div class="auth-visual-stats">
+        <div><strong>4,200+</strong><span>Members trained</span></div>
+        <div><strong>11</strong><span>Head coaches</span></div>
+        <div><strong>12yrs</strong><span>On the floor</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="auth-form-panel">
+    <div class="auth-card">
+      <p class="auth-eyebrow">Member sign in</p>
+      <h1>Welcome back to the floor.</h1>
+      <p class="auth-sub">Log in to reach your dashboard — coaching notes, classes and your training numbers, all in one place.</p>
+
+      <form id="loginForm" novalidate>
+
+        <div class="field-group" id="loginEmailGroup">
+          <input type="email" id="loginEmail" name="email" placeholder=" " autocomplete="email">
+          <label for="loginEmail">Email address</label>
+          <span class="field-error"></span>
+        </div>
+
+        <div class="field-group has-toggle" id="loginPasswordGroup">
+          <input type="password" id="loginPassword" name="password" placeholder=" " autocomplete="current-password">
+          <label for="loginPassword">Password</label>
+          <button type="button" class="pw-toggle" data-target="loginPassword" aria-label="Show password"><i class="fa-regular fa-eye"></i></button>
+          <span class="field-error"></span>
+        </div>
+
+        <div class="field-group role-group" id="loginRoleGroup">
+          <span class="role-label">I'm signing in as</span>
+          <div class="role-switch" data-target="loginRole">
+            <button type="button" class="role-option" data-role="user"><i class="fa-solid fa-user"></i> <span>Member</span></button>
+            <button type="button" class="role-option" data-role="admin"><i class="fa-solid fa-user-shield"></i> <span>Admin</span></button>
+          </div>
+          <input type="hidden" id="loginRole" value="">
+          <span class="field-error"></span>
+        </div>
+
+        <div class="field-row-between">
+          <label class="check-remember"><input type="checkbox" name="remember"><span>Remember me</span></label>
+          <a href="#" class="forgot-link">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="btn btn-gold btn-block auth-submit" id="loginSubmit">
+          <span class="btn-text">Log in to dashboard</span>
+          <i class="fa-solid fa-arrow-right"></i>
+          <span class="btn-spinner"></span>
+        </button>
+      </form>
+
+      <p class="auth-switch">New to Forge?<a href="signup.html">Create a membership account <i class="fa-solid fa-arrow-right"></i></a></p>
+    </div>
+  </div>
+
+</div>
+
+<script src="auth.js"></script>
+</body>
+</html>

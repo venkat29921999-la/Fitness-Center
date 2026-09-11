@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Create Account — Forge Athletic Club</title>
+<meta name="description" content="Create your Forge Athletic Club membership account.">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="auth.css">
+</head>
+<body class="auth-page">
+
+<a href="index.html" class="back-home-btn"><i class="fa-solid fa-arrow-left"></i><span>Back to home</span></a>
+<div class="auth-toast" id="authToast"></div>
+
+<div class="auth-shell">
+
+  <div class="auth-visual">
+    <img class="auth-visual-img" src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1400&q=80" alt="Member deadlifting a loaded barbell, showcasing strength and form">
+    <div class="auth-visual-overlay"></div>
+    <div class="auth-visual-content">
+      <a href="index.html" class="auth-logo"><img src="Assests/logo-gold.webp" alt="Forge Athletic Club" class="logo-img"></a>
+
+      <div class="auth-visual-badge">
+        <svg viewBox="0 0 100 100"><path id="signupCirclePath" fill="none" d="M 50,50 m -37,0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"/><text><textPath href="#signupCirclePath">MEMBERS ONLY • EST. 2014 • FORGE ATHLETIC •</textPath></text></svg>
+        <span class="auth-visual-badge-icon"><i class="fa-solid fa-dumbbell"></i></span>
+      </div>
+
+      <blockquote class="auth-quote">"Coached, not just supervised — from day one."<cite>— Forge house rule</cite></blockquote>
+
+      <div class="auth-visual-stats">
+        <div><strong>98%</strong><span>Retrain past year one</span></div>
+        <div><strong>18</strong><span>Max floor size</span></div>
+        <div><strong>45min</strong><span>First assessment</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="auth-form-panel">
+    <div class="auth-card">
+      <p class="auth-eyebrow">Start your membership</p>
+      <h1>Build your Forge account.</h1>
+      <p class="auth-sub">A couple of details and you're set — you'll log in right after with your new email and password.</p>
+
+      <form id="signupForm" novalidate>
+
+        <div class="field-group" id="signupNameGroup">
+          <input type="text" id="signupName" name="fullName" placeholder=" " autocomplete="name">
+          <label for="signupName">Full name</label>
+          <span class="field-error"></span>
+        </div>
+
+        <div class="field-group" id="signupEmailGroup">
+          <input type="email" id="signupEmail" name="email" placeholder=" " autocomplete="email">
+          <label for="signupEmail">Email address</label>
+          <span class="field-error"></span>
+        </div>
+
+        <div class="field-group has-toggle" id="signupPasswordGroup">
+          <input type="password" id="signupPassword" name="password" placeholder=" " autocomplete="new-password">
+          <label for="signupPassword">Password</label>
+          <button type="button" class="pw-toggle" data-target="signupPassword" aria-label="Show password"><i class="fa-regular fa-eye"></i></button>
+          <span class="field-error"></span>
+        </div>
+
+        <div class="pw-strength" id="pwStrength" data-score="0">
+          <div class="pw-strength-bars"><span></span><span></span><span></span><span></span></div>
+          <span class="pw-strength-label"></span>
+        </div>
+
+        <div class="field-group has-toggle" id="signupConfirmGroup">
+          <input type="password" id="signupConfirm" name="confirmPassword" placeholder=" " autocomplete="new-password">
+          <label for="signupConfirm">Confirm password</label>
+          <button type="button" class="pw-toggle" data-target="signupConfirm" aria-label="Show password"><i class="fa-regular fa-eye"></i></button>
+          <span class="field-error"></span>
+        </div>
+
+        <div class="field-group role-group" id="signupRoleGroup">
+          <span class="role-label">Account type</span>
+          <div class="role-switch" data-target="signupRole">
+            <button type="button" class="role-option" data-role="user"><i class="fa-solid fa-user"></i> <span>Member</span></button>
+            <button type="button" class="role-option" data-role="admin"><i class="fa-solid fa-user-shield"></i> <span>Admin</span></button>
+          </div>
+          <input type="hidden" id="signupRole" value="">
+          <span class="field-error"></span>
+        </div>
+
+        <div class="field-group" id="signupTermsGroup" style="margin-bottom:26px;">
+          <label class="check-terms">
+            <input type="checkbox" id="signupTerms">
+            <span>I agree to the <a href="#">membership terms</a> and the front desk contacting me about my account.</span>
+          </label>
+          <span class="field-error"></span>
+        </div>
+
+        <button type="submit" class="btn btn-gold btn-block auth-submit" id="signupSubmit">
+          <span class="btn-text">Create account</span>
+          <i class="fa-solid fa-arrow-right"></i>
+          <span class="btn-spinner"></span>
+        </button>
+      </form>
+
+      <p class="auth-switch">Already a member?<a href="login.html">Log in instead <i class="fa-solid fa-arrow-right"></i></a></p>
+    </div>
+  </div>
+
+</div>
+
+<script src="auth.js"></script>
+</body>
+</html>

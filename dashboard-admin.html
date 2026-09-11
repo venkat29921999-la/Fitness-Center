@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard — Forge Athletic Club</title>
+<meta name="description" content="Forge Athletic Club admin dashboard — members, activity and inbox.">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="auth.css">
+<link rel="stylesheet" href="dashboard.css">
+</head>
+<body class="dash-body" data-role="admin">
+
+<div class="dash-overlay" id="dashOverlay"></div>
+
+<div class="dash-shell">
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="dash-sidebar" id="dashSidebar">
+    <button type="button" class="dash-sidebar-close" id="dashSidebarClose" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+    <div class="dash-brand">
+      <a href="index.html" class="auth-logo"><img src="Assests/logo-gold.webp" alt="Forge Athletic Club" class="logo-img"></a>
+    </div>
+
+    <span class="dash-role-badge"><i class="fa-solid fa-user-shield"></i> Admin console</span>
+
+    <nav class="dash-nav">
+      <a href="#overview" class="active"><i class="fa-solid fa-gauge-high"></i> Overview</a>
+      <a href="#activity"><i class="fa-solid fa-chart-column"></i> Weekly activity</a>
+      <a href="#members"><i class="fa-solid fa-people-group"></i> Members</a>
+      <a href="#revenue"><i class="fa-solid fa-sack-dollar"></i> Revenue</a>
+      <a href="#inbox"><i class="fa-solid fa-inbox"></i> Inbox <span class="dash-nav-badge" data-unread-badge data-unread-count>0</span></a>
+      <a href="#settings"><i class="fa-solid fa-gear"></i> Settings</a>
+    </nav>
+
+    <div class="dash-sidebar-foot">
+      <a href="index.html" class="dash-foot-link"><i class="fa-solid fa-house"></i> Back to website</a>
+      <button type="button" class="dash-foot-link dash-logout" data-logout><i class="fa-solid fa-arrow-right-from-bracket"></i> Log out</button>
+    </div>
+  </aside>
+
+  <!-- ============ CONTENT ============ -->
+  <div class="dash-content">
+
+    <!-- Topbar -->
+    <header class="dash-topbar">
+      <button class="dash-menu-btn" id="dashMenuBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
+
+      <div class="dash-search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Search members, classes, messages…">
+      </div>
+
+      <div class="dash-topbar-actions">
+        <a href="#inbox" class="dash-bell" aria-label="Notifications">
+          <i class="fa-solid fa-bell"></i>
+          <span class="dash-bell-dot" data-unread-badge></span>
+        </a>
+        <div class="dash-user-menu">
+          <button class="dash-user-btn" id="userMenuBtn">
+            <span class="dash-avatar" data-user-initial>A</span>
+            <span class="dash-user-name" data-user-name>Admin</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="dash-user-dropdown" id="userMenu">
+            <p data-user-email>admin@forgeathletic.club</p>
+            <button type="button" data-logout><i class="fa-solid fa-arrow-right-from-bracket"></i> Log out</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Overview -->
+    <section id="overview" class="dash-section active">
+      <div class="dash-welcome">
+        <div>
+          <h1>Welcome back, <span data-user-name>Admin</span>.</h1>
+          <p data-today>Loading today's date…</p>
+        </div>
+        <img class="dash-welcome-img" src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=400&q=80" alt="Forge training floor">
+      </div>
+
+      <div class="stat-grid">
+        <div class="stat-card">
+          <span class="stat-icon"><i class="fa-solid fa-people-group"></i></span>
+          <span class="stat-value"><span data-count-to="1240">0</span></span>
+          <span class="stat-label">Active members</span>
+          <span class="stat-trend up">+18 this week</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-icon"><i class="fa-solid fa-user-plus"></i></span>
+          <span class="stat-value"><span data-count-to="18">0</span></span>
+          <span class="stat-label">New signups (7 days)</span>
+          <span class="stat-trend up">+6% vs last week</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-icon"><i class="fa-solid fa-sack-dollar"></i></span>
+          <span class="stat-value">$<span data-count-to="128400">0</span></span>
+          <span class="stat-label">Monthly revenue</span>
+          <span class="stat-trend up">+4.2% MoM</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-icon"><i class="fa-solid fa-dumbbell"></i></span>
+          <span class="stat-value"><span data-count-to="14">0</span></span>
+          <span class="stat-label">Classes today</span>
+          <span class="stat-trend">On schedule</span>
+        </div>
+      </div>
+
+      <div class="dash-panel" style="margin-top:20px;">
+        <div class="dash-panel-head">
+          <h2>Quick actions</h2>
+          <p>Common tasks, one tap away</p>
+        </div>
+        <div class="quick-actions">
+          <button type="button" class="quick-action-btn" data-quick-action="Member added — demo only"><i class="fa-solid fa-user-plus"></i> Add member</button>
+          <button type="button" class="quick-action-btn" data-quick-action="Class created — demo only"><i class="fa-solid fa-calendar-plus"></i> Create class</button>
+          <button type="button" class="quick-action-btn" data-quick-action="Announcement queued — demo only"><i class="fa-solid fa-bullhorn"></i> Send announcement</button>
+          <button type="button" class="quick-action-btn" data-quick-action="Report exported — demo only"><i class="fa-solid fa-file-export"></i> Export report</button>
+        </div>
+
+        <div class="dash-subhead"><h3>Today's schedule</h3><span>6 sessions</span></div>
+        <div class="schedule-list">
+          <div class="schedule-item">
+            <span class="schedule-time">6:00 AM</span>
+            <div class="schedule-info"><strong>Strength Block C</strong><span>Coach Priya · Main floor</span></div>
+            <span class="schedule-capacity">16 / 18</span>
+          </div>
+          <div class="schedule-item">
+            <span class="schedule-time">7:30 AM</span>
+            <div class="schedule-info"><strong>HIIT Conditioning</strong><span>Coach Malik · Turf room</span></div>
+            <span class="schedule-capacity">12 / 18</span>
+          </div>
+          <div class="schedule-item">
+            <span class="schedule-time">12:00 PM</span>
+            <div class="schedule-info"><strong>1:1 Personal Coaching</strong><span>Coach Elena · Studio B</span></div>
+            <span class="schedule-capacity">1 / 1</span>
+          </div>
+          <div class="schedule-item">
+            <span class="schedule-time">6:00 PM</span>
+            <div class="schedule-info"><strong>Boxing Fundamentals</strong><span>Coach Malik · Main floor</span></div>
+            <span class="schedule-capacity">18 / 18</span>
+          </div>
+          <div class="schedule-item">
+            <span class="schedule-time">7:15 PM</span>
+            <div class="schedule-info"><strong>Yoga &amp; Recovery</strong><span>Coach Elena · Studio A</span></div>
+            <span class="schedule-capacity">9 / 18</span>
+          </div>
+          <div class="schedule-item">
+            <span class="schedule-time">8:30 PM</span>
+            <div class="schedule-info"><strong>Strength Block C</strong><span>Coach Priya · Main floor</span></div>
+            <span class="schedule-capacity">14 / 18</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Weekly activity -->
+    <section id="activity" class="dash-section">
+      <div class="dash-panel">
+        <div class="dash-panel-head">
+          <h2>Weekly check-ins</h2>
+          <p>Floor traffic across the last 7 days</p>
+        </div>
+        <div class="bar-chart">
+          <div class="bar-col"><div class="bar" data-value="62"></div><span>Mon</span></div>
+          <div class="bar-col"><div class="bar" data-value="74"></div><span>Tue</span></div>
+          <div class="bar-col"><div class="bar" data-value="58"></div><span>Wed</span></div>
+          <div class="bar-col"><div class="bar" data-value="81"></div><span>Thu</span></div>
+          <div class="bar-col"><div class="bar" data-value="69"></div><span>Fri</span></div>
+          <div class="bar-col"><div class="bar" data-value="90"></div><span>Sat</span></div>
+          <div class="bar-col"><div class="bar" data-value="45"></div><span>Sun</span></div>
+        </div>
+      </div>
+
+      <div class="dash-panel">
+        <div class="dash-panel-head">
+          <h2>Peak hours</h2>
+          <p>When the floor is busiest, on average</p>
+        </div>
+        <div class="profile-grid">
+          <div class="progress-item">
+            <span class="progress-item-label">Early AM (5–8)</span>
+            <div class="progress-track"><div class="progress-fill" data-value="71"></div></div>
+            <span class="progress-item-value">71%</span>
+          </div>
+          <div class="progress-item">
+            <span class="progress-item-label">Midday</span>
+            <div class="progress-track"><div class="progress-fill" data-value="34"></div></div>
+            <span class="progress-item-value">34%</span>
+          </div>
+          <div class="progress-item">
+            <span class="progress-item-label">Evening (5–8)</span>
+            <div class="progress-track"><div class="progress-fill" data-value="94"></div></div>
+            <span class="progress-item-value">94%</span>
+          </div>
+          <div class="progress-item">
+            <span class="progress-item-label">Late night</span>
+            <div class="progress-track"><div class="progress-fill" data-value="22"></div></div>
+            <span class="progress-item-value">22%</span>
+          </div>
+        </div>
+
+        <div class="dash-subhead"><h3>Top classes this week</h3><span>By attendance</span></div>
+        <div class="table-wrap">
+          <table class="dash-table">
+            <thead><tr><th>Class</th><th>Coach</th><th>Sessions</th><th>Avg. attendance</th></tr></thead>
+            <tbody>
+              <tr><td>Boxing Fundamentals</td><td>Coach Malik</td><td>6</td><td>17 / 18</td></tr>
+              <tr><td>Strength Block C</td><td>Coach Priya</td><td>7</td><td>15 / 18</td></tr>
+              <tr><td>HIIT Conditioning</td><td>Coach Malik</td><td>5</td><td>13 / 18</td></tr>
+              <tr><td>Yoga &amp; Recovery</td><td>Coach Elena</td><td>4</td><td>10 / 18</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Members -->
+    <section id="members" class="dash-section">
+      <div class="dash-panel">
+        <div class="dash-panel-head">
+          <h2>Membership breakdown</h2>
+          <p>Where the floor stands right now</p>
+        </div>
+        <div class="stat-grid">
+          <div class="stat-card">
+            <span class="stat-icon"><i class="fa-solid fa-circle-check"></i></span>
+            <span class="stat-value" data-count-to="1198">0</span>
+            <span class="stat-label">Active</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-icon"><i class="fa-solid fa-pause"></i></span>
+            <span class="stat-value" data-count-to="42">0</span>
+            <span class="stat-label">Paused</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-icon"><i class="fa-solid fa-whistle"></i></span>
+            <span class="stat-value" data-count-to="11">0</span>
+            <span class="stat-label">Coaches</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-icon"><i class="fa-solid fa-user-clock"></i></span>
+            <span class="stat-value" data-count-to="6">0</span>
+            <span class="stat-label">Pending assessments</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="dash-panel">
+        <div class="dash-panel-head">
+          <h2>Recent members</h2>
+          <p>Latest people on the floor — click a status to update it</p>
+        </div>
+        <div class="table-wrap">
+          <table class="dash-table">
+            <thead>
+              <tr><th>Member</th><th>Role</th><th>Plan</th><th>Joined</th><th>Status</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="table-avatar" style="background:#C6A15B26;color:#C6A15B">RM</span>Ravi Menon</td>
+                <td><span class="role-pill">Member</span></td>
+                <td>Strength Training</td>
+                <td>Sep 2, 2026</td>
+                <td><span class="status-badge status-active" data-status-toggle>Active</span></td>
+              </tr>
+              <tr>
+                <td><span class="table-avatar" style="background:#E4C48026;color:#E4C480">AS</span>Aditi Sharma</td>
+                <td><span class="role-pill">Member</span></td>
+                <td>Boxing &amp; Combat</td>
+                <td>Aug 28, 2026</td>
+                <td><span class="status-badge status-active" data-status-toggle>Active</span></td>
+              </tr>
+              <tr>
+                <td><span class="table-avatar" style="background:#8E6E3726;color:#8E6E37">KI</span>Karthik Iyer</td>
+                <td><span class="role-pill">Member</span></td>
+                <td>1:1 Personal Coaching</td>
+                <td>Aug 20, 2026</td>
+                <td><span class="status-badge status-paused" data-status-toggle>Paused</span></td>
+              </tr>
+              <tr>
+                <td><span class="table-avatar" style="background:#8FB39C26;color:#8FB39C">PC</span>Priya Chandran</td>
+                <td><span class="role-pill">Coach</span></td>
+                <td>Staff</td>
+                <td>Feb 11, 2024</td>
+                <td><span class="status-badge status-active" data-status-toggle>Active</span></td>
+              </tr>
+              <tr>
+                <td><span class="table-avatar" style="background:#C6A15B26;color:#C6A15B">DN</span>Deepak Nair</td>
+                <td><span class="role-pill">Member</span></td>
+                <td>HIIT Conditioning</td>
+                <td>Jul 30, 2026</td>
+                <td><span class="status-badge status-active" data-status-toggle>Active</span></td>
+              </tr>
+              <tr>
+                <td><span class="table-avatar" style="background:#E4C48026;color:#E4C480">FQ</span>Farah Qureshi</td>
+                <td><span class="role-pill">Member</span></td>
+                <td>Strength Training</td>
+                <td>Jul 22, 2026</td>
+                <td><span class="status-badge status-active" data-status-toggle>Active</span></td>
+              </tr>
+              <tr>
+                <td><span class="table-avatar" style="background:#8E6E3726;color:#8E6E37">MK</span>Malik Khan</td>
+                <td><span class="role-pill">Coach</span></td>
+                <td>Staff</td>
+                <td>Mar 4, 2022</td>
+                <td><span class="status-badge status-active" data-status-toggle>Active</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Revenue -->
+    <section id="revenue" class="dash-section">
+      <div class="dash-panel">
+        <div class="dash-panel-head">
+          <h2>Revenue</h2>
+          <p>Last 6 months, and where this month's income comes from</p>
+        </div>
+        <div class="bar-chart" style="margin-bottom:30px;">
+          <div class="bar-col"><div class="bar" data-value="58"></div><span>Apr</span></div>
+          <div class="bar-col"><div class="bar" data-value="64"></div><span>May</span></div>
+          <div class="bar-col"><div class="bar" data-value="71"></div><span>Jun</span></div>
+          <div class="bar-col"><div class="bar" data-value="69"></div><span>Jul</span></div>
+          <div class="bar-col"><div class="bar" data-value="88"></div><span>Aug</span></div>
+          <div class="bar-col"><div class="bar" data-value="96"></div><span>Sep</span></div>
+        </div>
+        <div class="dash-divider"></div>
+        <div class="profile-grid">
+          <div class="progress-item">
+            <span class="progress-item-label">Strength</span>
+            <div class="progress-track"><div class="progress-fill" data-value="38"></div></div>
+            <span class="progress-item-value">38%</span>
+          </div>
+          <div class="progress-item">
+            <span class="progress-item-label">Boxing</span>
+            <div class="progress-track"><div class="progress-fill" data-value="24"></div></div>
+            <span class="progress-item-value">24%</span>
+          </div>
+          <div class="progress-item">
+            <span class="progress-item-label">Coaching</span>
+            <div class="progress-track"><div class="progress-fill" data-value="21"></div></div>
+            <span class="progress-item-value">21%</span>
+          </div>
+          <div class="progress-item">
+            <span class="progress-item-label">Yoga &amp; HIIT</span>
+            <div class="progress-track"><div class="progress-fill" data-value="17"></div></div>
+            <span class="progress-item-value">17%</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="dash-panel">
+        <div class="dash-panel-head">
+          <h2>Recent transactions</h2>
+          <p>Latest payments processed across all plans</p>
+        </div>
+        <div class="table-wrap">
+          <table class="dash-table">
+            <thead><tr><th>Member</th><th>Plan</th><th>Amount</th><th>Date</th><th>Status</th></tr></thead>
+            <tbody>
+              <tr><td>Ravi Menon</td><td>Strength Training</td><td>$149.00</td><td>Sep 10, 2026</td><td><span class="status-badge status-active">Paid</span></td></tr>
+              <tr><td>Aditi Sharma</td><td>Boxing &amp; Combat</td><td>$139.00</td><td>Sep 9, 2026</td><td><span class="status-badge status-active">Paid</span></td></tr>
+              <tr><td>Karthik Iyer</td><td>1:1 Personal Coaching</td><td>$320.00</td><td>Sep 8, 2026</td><td><span class="status-badge status-paused">Refunded</span></td></tr>
+              <tr><td>Deepak Nair</td><td>HIIT Conditioning</td><td>$129.00</td><td>Sep 7, 2026</td><td><span class="status-badge status-active">Paid</span></td></tr>
+              <tr><td>Farah Qureshi</td><td>Strength Training</td><td>$149.00</td><td>Sep 6, 2026</td><td><span class="status-badge status-active">Paid</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Inbox -->
+    <section id="inbox" class="dash-section">
+      <div class="dash-panel">
+        <div class="dash-panel-head">
+          <h2>Inbox</h2>
+          <p>Inquiries, billing notes and newsletter signups — click a message to open it</p>
+        </div>
+        <div class="inbox-toolbar">
+          <div class="inbox-search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="inboxSearch" placeholder="Search messages…">
+          </div>
+          <div class="inbox-chips" id="inboxChips"></div>
+        </div>
+        <div class="inbox-list" id="inboxList"></div>
+      </div>
+    </section>
+
+    <!-- Settings -->
+    <section id="settings" class="dash-section">
+      <div class="dash-panel">
+        <div class="dash-panel-head">
+          <h2>Club settings</h2>
+          <p>Notification preferences for the admin console</p>
+        </div>
+
+        <div class="dash-field">
+          <label for="profileName">Admin name</label>
+          <input type="text" id="profileName" placeholder="Your name">
+        </div>
+        <div class="dash-field">
+          <label for="profileEmail">Admin email</label>
+          <input type="email" id="profileEmail" placeholder="you@forgeathletic.club">
+        </div>
+
+        <div class="dash-divider"></div>
+
+        <div class="switch-row">
+          <div>
+            <div class="switch-row-label">New member email alerts</div>
+            <div class="switch-row-desc">Get an email whenever someone signs up on the website.</div>
+          </div>
+          <label class="switch"><input type="checkbox" checked><span class="switch-track"></span></label>
+        </div>
+        <div class="switch-row">
+          <div>
+            <div class="switch-row-label">Weekly revenue report</div>
+            <div class="switch-row-desc">A Monday-morning summary sent to the admin inbox.</div>
+          </div>
+          <label class="switch"><input type="checkbox" checked><span class="switch-track"></span></label>
+        </div>
+        <div class="switch-row">
+          <div>
+            <div class="switch-row-label">SMS reminders for coaches</div>
+            <div class="switch-row-desc">Text coaches an hour before their next class.</div>
+          </div>
+          <label class="switch"><input type="checkbox"><span class="switch-track"></span></label>
+        </div>
+        <div class="switch-row">
+          <div>
+            <div class="switch-row-label">Maintenance mode</div>
+            <div class="switch-row-desc">Show a temporary notice on the public website.</div>
+          </div>
+          <label class="switch"><input type="checkbox"><span class="switch-track"></span></label>
+        </div>
+
+        <button type="button" class="dash-save-btn" data-save-settings><i class="fa-solid fa-floppy-disk"></i> Save changes</button>
+
+        <div class="dash-subhead"><h3>Security</h3><span></span></div>
+        <div class="switch-row">
+          <div>
+            <div class="switch-row-label">Two-factor authentication</div>
+            <div class="switch-row-desc">Require a code from your phone when logging in.</div>
+          </div>
+          <label class="switch"><input type="checkbox" checked><span class="switch-track"></span></label>
+        </div>
+        <div class="switch-row">
+          <div>
+            <div class="switch-row-label">Login alerts</div>
+            <div class="switch-row-desc">Email me when the admin console is opened from a new device.</div>
+          </div>
+          <label class="switch"><input type="checkbox" checked><span class="switch-track"></span></label>
+        </div>
+
+        <div class="danger-panel">
+          <div>
+            <h3>Deactivate admin access</h3>
+            <p>Revokes console access for this account. Another admin will need to restore it.</p>
+          </div>
+          <button type="button" class="danger-btn" data-danger-action="This is a demo — access was not changed"><i class="fa-solid fa-triangle-exclamation"></i> Deactivate</button>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+<div class="auth-toast" id="dashToast"></div>
+
+<script src="dashboard.js"></script>
+</body>
+</html>

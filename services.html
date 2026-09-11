@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services — Forge Athletic Club</title>
+<meta name="description" content="Five coached disciplines at Forge Athletic Club — strength, boxing, yoga & recovery, HIIT conditioning and 1:1 personal coaching. See the weekly board, pricing and how a program actually gets built.">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<!-- AOS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- CUSTOM CURSOR -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- PRELOADER -->
+<div class="preloader" id="preloader">
+  <div class="preloader-mark">
+    <span>F</span><span>O</span><span>R</span><span>G</span><span>E</span>
+  </div>
+  <div class="preloader-bar"><div class="preloader-fill" id="preloaderFill"></div></div>
+</div>
+
+<!-- HEADER -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <img src="Assests/logo-gold.webp" alt="Forge Athletic Club" class="logo-img">
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <div class="nav-pill">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link active">Services</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+      <div class="mobile-nav-foot">
+        <a href="#" class="login-link login-link-mobile">Log in</a>
+        <a href="index.html#membership" class="btn btn-gold btn-block">Join Forge</a>
+        <div class="mobile-nav-social">
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="header-actions">
+      <a href="#" class="login-link">Log in</a>
+      <a href="index.html#membership" class="btn btn-gold btn-sm magnetic">Join Forge</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+<div class="nav-overlay" id="navOverlay"></div>
+
+<main id="services-top">
+
+  <!-- ============ 1. SERVICES HERO — diagonal wipe reveal + scramble-text title ============ -->
+  <section class="sv-hero">
+    <div class="sv-hero-media">
+      <img class="sv-hero-img" src="Assests/fc18_under_100kb.webp" alt="Forge's current strength room with racks and platforms along a brick wall">
+      <div class="sv-hero-gradient"></div>
+      <span class="sv-diagonal-wipe"></span>
+      <div class="hero-grain"></div>
+    </div>
+
+    <div class="sv-hero-chip">
+      <i class="fa-solid fa-bolt"></i>
+      <span>5 disciplines · 1 membership</span>
+    </div>
+
+    <div class="sv-hero-content">
+      <p class="sv-crumb"><a href="index.html">Home</a><i class="fa-solid fa-chevron-right"></i><span>Services</span></p>
+      <h1 class="sv-hero-title" id="svHeroTitle" data-text="Every sleeve, coached on purpose.">Every sleeve, coached on purpose.</h1>
+      <p class="sv-hero-sub">Strength, boxing, recovery, conditioning and 1:1 coaching — five disciplines run by named specialists, not a rotating roster of whoever clocked in.</p>
+      <div class="sv-hero-scroll"><span></span>See the board</div>
+    </div>
+  </section>
+
+  <!-- ============ 2. SERVICE MENU — expanding accordion panels ============ -->
+  <section class="sv-menu" id="sv-menu">
+    <div class="section-head">
+      <p class="eyebrow" data-aos="fade-up">On the weekly board</p>
+      <h2 data-aos="fade-up" data-aos-delay="100">Five sleeves. Pick one, or run all five.</h2>
+      <p class="section-sub" data-aos="fade-up" data-aos-delay="150">Hover a panel on desktop, or tap it on mobile — each one opens onto the room it's coached in.</p>
+    </div>
+
+    <div class="sv-accordion" id="svAccordion" data-aos="fade-up" data-aos-delay="150">
+      <div class="sv-acc-panel is-open" data-panel>
+        <img src="Assests/fc8_under_100kb.webp" alt="Athlete deadlifting a loaded barbell in the strength room">
+        <div class="sv-acc-overlay"></div>
+        <div class="sv-acc-label">
+          <span class="sv-acc-num">01</span>
+          <h3>Strength Training</h3>
+        </div>
+        <div class="sv-acc-detail">
+          <p>Squat, press, pull — programmed in 4-week blocks against your own numbers, reviewed monthly.</p>
+          <a href="#sv-pricing" class="sv-acc-link">See pricing <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="sv-acc-panel" data-panel>
+        <img src="Assests/fc9_under_100kb.webp" alt="Boxer training pads with her coach in the ring room">
+        <div class="sv-acc-overlay"></div>
+        <div class="sv-acc-label">
+          <span class="sv-acc-num">02</span>
+          <h3>Boxing &amp; Combat</h3>
+        </div>
+        <div class="sv-acc-detail">
+          <p>Pad work, bag rounds and footwork drilled by a licensed corner coach, capped at eight per round.</p>
+          <a href="#sv-pricing" class="sv-acc-link">See pricing <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="sv-acc-panel" data-panel>
+        <img src="Assests/fc10_under_100kb.webp" alt="Group recovery and mobility class practising on mats in the quiet room">
+        <div class="sv-acc-overlay"></div>
+        <div class="sv-acc-label">
+          <span class="sv-acc-num">03</span>
+          <h3>Yoga &amp; Recovery</h3>
+        </div>
+        <div class="sv-acc-detail">
+          <p>Mobility, breath work and deload sessions built around whatever you lifted the day before.</p>
+          <a href="#sv-pricing" class="sv-acc-link">See pricing <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="sv-acc-panel" data-panel>
+        <img src="Assests/fc11_under_100kb.webp" alt="Athlete on a treadmill during a high intensity conditioning circuit">
+        <div class="sv-acc-overlay"></div>
+        <div class="sv-acc-label">
+          <span class="sv-acc-num">04</span>
+          <h3>HIIT Conditioning</h3>
+        </div>
+        <div class="sv-acc-detail">
+          <p>Thirty-five minutes of heart-rate tracked engine work. Never the same circuit run twice.</p>
+          <a href="#sv-pricing" class="sv-acc-link">See pricing <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="sv-acc-panel" data-panel>
+        <img src="Assests/fc22.webp" alt="Personal trainer lacing up a client's gloves before a private session">
+        <div class="sv-acc-overlay"></div>
+        <div class="sv-acc-label">
+          <span class="sv-acc-num">05</span>
+          <h3>1:1 Coaching</h3>
+        </div>
+        <div class="sv-acc-detail">
+          <p>A dedicated coach, a shared log, and a plan that changes the moment your life does.</p>
+          <a href="#sv-pricing" class="sv-acc-link">See pricing <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 3. HOW IT WORKS — animated connector-line steps ============ -->
+  <section class="sv-process">
+    <div class="section-head">
+      <p class="eyebrow" data-aos="fade-up">From walk-in to week one</p>
+      <h2 data-aos="fade-up" data-aos-delay="100">How a program actually gets built.</h2>
+      <p class="section-sub" data-aos="fade-up" data-aos-delay="150">The same four steps for every discipline on the board — nobody skips the assessment.</p>
+    </div>
+
+    <div class="sv-process-wrap" id="svProcessWrap">
+      <svg class="sv-process-svg" viewBox="0 0 1000 4" preserveAspectRatio="none" aria-hidden="true">
+        <line class="sv-process-track" x1="0" y1="2" x2="1000" y2="2"></line>
+        <line class="sv-process-fill" id="svProcessFill" x1="0" y1="2" x2="1000" y2="2"></line>
+      </svg>
+      <div class="sv-process-steps">
+        <div class="sv-process-step">
+          <span class="sv-process-node"><i class="fa-solid fa-clipboard-check"></i></span>
+          <span class="sv-process-tag">Step 01</span>
+          <h3>Movement assessment</h3>
+          <p>45 minutes on the floor with a coach — mobility, history, the shoulder that keeps barking.</p>
+        </div>
+        <div class="sv-process-step">
+          <span class="sv-process-node"><i class="fa-solid fa-pen-ruler"></i></span>
+          <span class="sv-process-tag">Step 02</span>
+          <h3>Program written</h3>
+          <p>A named coach writes your first 4-week block against your numbers, not a template.</p>
+        </div>
+        <div class="sv-process-step">
+          <span class="sv-process-node"><i class="fa-solid fa-dumbbell"></i></span>
+          <span class="sv-process-tag">Step 03</span>
+          <h3>Coached sessions</h3>
+          <p>Train on the capped floor. Your coach is present, not just supervising from a desk.</p>
+        </div>
+        <div class="sv-process-step">
+          <span class="sv-process-node"><i class="fa-solid fa-chart-line"></i></span>
+          <span class="sv-process-tag">Step 04</span>
+          <h3>Monthly review</h3>
+          <p>Numbers checked, block adjusted. Programs change when your life or lifts do.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 4. PRICING — sliding toggle + deck-deal card entrance ============ -->
+  <section class="sv-pricing" id="sv-pricing">
+    <div class="section-head">
+      <p class="eyebrow" data-aos="fade-up">Printed, not padded</p>
+      <h2 data-aos="fade-up" data-aos-delay="100">One price. No joining fee.</h2>
+      <p class="section-sub" data-aos="fade-up" data-aos-delay="150">Month-to-month as standard. Switch the toggle to see what a year saves you.</p>
+    </div>
+
+    <div class="sv-toggle" id="svToggle">
+      <span class="sv-toggle-label is-active" data-label="monthly">Monthly</span>
+      <button class="sv-toggle-switch" id="svToggleBtn" aria-pressed="false" aria-label="Toggle annual pricing">
+        <span class="sv-toggle-thumb"></span>
+      </button>
+      <span class="sv-toggle-label" data-label="annual">Annual <em>save 15%</em></span>
+    </div>
+
+    <div class="sv-price-grid">
+      <div class="sv-price-card" style="--rot:-5deg">
+        <span class="sv-price-icon"><i class="fa-solid fa-door-open"></i></span>
+        <h3>Floor Access</h3>
+        <p class="sv-price-desc">Open gym, all conditioning classes, no coaching sleeve.</p>
+        <div class="sv-price-amt">
+          <span class="sv-price-monthly">$59<small>/mo</small></span>
+          <span class="sv-price-annual">$50<small>/mo</small></span>
+        </div>
+        <ul>
+          <li><i class="fa-solid fa-check"></i> Unlimited open floor</li>
+          <li><i class="fa-solid fa-check"></i> All HIIT &amp; conditioning</li>
+          <li><i class="fa-solid fa-check"></i> Recovery room access</li>
+          <li class="off"><i class="fa-solid fa-xmark"></i> Named coach</li>
+        </ul>
+        <a href="index.html#contact" class="btn btn-gold-outline btn-block magnetic">Choose Floor Access</a>
+      </div>
+
+      <div class="sv-price-card sv-price-featured" style="--rot:0deg">
+        <span class="sv-price-badge">Most booked</span>
+        <span class="sv-price-icon"><i class="fa-solid fa-user-check"></i></span>
+        <h3>Coached Sleeve</h3>
+        <p class="sv-price-desc">One discipline, one named coach, programmed monthly.</p>
+        <div class="sv-price-amt">
+          <span class="sv-price-monthly">$139<small>/mo</small></span>
+          <span class="sv-price-annual">$118<small>/mo</small></span>
+        </div>
+        <ul>
+          <li><i class="fa-solid fa-check"></i> Everything in Floor Access</li>
+          <li><i class="fa-solid fa-check"></i> One named specialist coach</li>
+          <li><i class="fa-solid fa-check"></i> Monthly program review</li>
+          <li><i class="fa-solid fa-check"></i> Priority class booking</li>
+        </ul>
+        <a href="index.html#contact" class="btn btn-gold btn-block magnetic">Choose Coached Sleeve</a>
+      </div>
+
+      <div class="sv-price-card" style="--rot:5deg">
+        <span class="sv-price-icon"><i class="fa-solid fa-crown"></i></span>
+        <h3>Private Floor</h3>
+        <p class="sv-price-desc">1:1 coaching across every discipline, shared training log.</p>
+        <div class="sv-price-amt">
+          <span class="sv-price-monthly">$319<small>/mo</small></span>
+          <span class="sv-price-annual">$271<small>/mo</small></span>
+        </div>
+        <ul>
+          <li><i class="fa-solid fa-check"></i> Everything in Coached Sleeve</li>
+          <li><i class="fa-solid fa-check"></i> 1:1 sessions, any discipline</li>
+          <li><i class="fa-solid fa-check"></i> Direct coach messaging</li>
+          <li><i class="fa-solid fa-check"></i> Quarterly plan reset</li>
+        </ul>
+        <a href="index.html#contact" class="btn btn-gold-outline btn-block magnetic">Choose Private Floor</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 5. WEEKLY SCHEDULE — day filter with cross-fade grid ============ -->
+  <section class="sv-schedule" id="sv-schedule">
+    <div class="section-head">
+      <p class="eyebrow" data-aos="fade-up">The weekly board</p>
+      <h2 data-aos="fade-up" data-aos-delay="100">Pick a day. See what's running.</h2>
+      <p class="section-sub" data-aos="fade-up" data-aos-delay="150">Every class is capped — the number on the card is the number of racks left.</p>
+    </div>
+
+    <div class="sv-day-tabs" id="svDayTabs" data-aos="fade-up" data-aos-delay="150">
+      <button class="sv-day-tab is-active" data-day="mon">Mon</button>
+      <button class="sv-day-tab" data-day="tue">Tue</button>
+      <button class="sv-day-tab" data-day="wed">Wed</button>
+      <button class="sv-day-tab" data-day="thu">Thu</button>
+      <button class="sv-day-tab" data-day="fri">Fri</button>
+      <button class="sv-day-tab" data-day="sat">Sat</button>
+    </div>
+
+    <div class="sv-schedule-grid" id="svScheduleGrid" data-aos="fade-up" data-aos-delay="200"></div>
+  </section>
+
+  <!-- ============ 6. COMPARE PLANS — mouse spotlight + draw-in checks ============ -->
+  <section class="sv-compare">
+    <div class="section-head">
+      <p class="eyebrow" data-aos="fade-up">Side by side</p>
+      <h2 data-aos="fade-up" data-aos-delay="100">What's actually included.</h2>
+      <p class="section-sub" data-aos="fade-up" data-aos-delay="150">Move your cursor across the table — the plan you're closest to lights up.</p>
+    </div>
+
+    <div class="sv-compare-wrap" id="svCompareWrap" data-aos="zoom-in">
+      <div class="sv-spotlight" id="svSpotlight"></div>
+      <table class="sv-compare-table">
+        <thead>
+          <tr>
+            <th class="sv-compare-feat"></th>
+            <th>Floor Access</th>
+            <th>Coached Sleeve</th>
+            <th class="sv-compare-best">Private Floor</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="sv-compare-feat">Open gym floor</td><td><i class="fa-solid fa-check sv-check"></i></td><td><i class="fa-solid fa-check sv-check"></i></td><td><i class="fa-solid fa-check sv-check"></i></td></tr>
+          <tr><td class="sv-compare-feat">HIIT &amp; conditioning classes</td><td><i class="fa-solid fa-check sv-check"></i></td><td><i class="fa-solid fa-check sv-check"></i></td><td><i class="fa-solid fa-check sv-check"></i></td></tr>
+          <tr><td class="sv-compare-feat">Named specialist coach</td><td><i class="fa-solid fa-xmark sv-x"></i></td><td><i class="fa-solid fa-check sv-check"></i></td><td><i class="fa-solid fa-check sv-check"></i></td></tr>
+          <tr><td class="sv-compare-feat">Monthly program review</td><td><i class="fa-solid fa-xmark sv-x"></i></td><td><i class="fa-solid fa-check sv-check"></i></td><td><i class="fa-solid fa-check sv-check"></i></td></tr>
+          <tr><td class="sv-compare-feat">1:1 sessions, any discipline</td><td><i class="fa-solid fa-xmark sv-x"></i></td><td><i class="fa-solid fa-xmark sv-x"></i></td><td><i class="fa-solid fa-check sv-check"></i></td></tr>
+          <tr><td class="sv-compare-feat">Direct coach messaging</td><td><i class="fa-solid fa-xmark sv-x"></i></td><td><i class="fa-solid fa-xmark sv-x"></i></td><td><i class="fa-solid fa-check sv-check"></i></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ============ 7. CTA — morphing blob parallax + floating particles ============ -->
+  <section class="sv-cta">
+    <div class="sv-cta-media">
+      <img src="Assests/fc21_under_100kb.webp" alt="Close-up of gym weight plates stacked on the training floor">
+      <div class="hero-grain"></div>
+    </div>
+    <div class="sv-blob sv-blob-1" id="svBlob1"></div>
+    <div class="sv-blob sv-blob-2" id="svBlob2"></div>
+    <div class="sv-particles" id="svParticles"></div>
+
+    <div class="sv-cta-inner">
+      <p class="eyebrow eyebrow-light" data-aos="fade-up">Ready when you are</p>
+      <h2 class="sv-cta-title" data-aos="fade-up" data-aos-delay="100">Pick a sleeve.<br>Walk onto the floor this week.</h2>
+      <div class="sv-cta-actions" data-aos="fade-up" data-aos-delay="200">
+        <a href="index.html#membership" class="btn btn-gold magnetic"><span>See membership</span><i class="fa-solid fa-arrow-right"></i></a>
+        <a href="index.html#contact" class="btn-play magnetic">
+          <span class="btn-play-icon"><i class="fa-solid fa-arrow-right"></i></span>
+          Book a walk-through
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="index.html" class="logo footer-logo">
+        <img src="Assests/logo-gold.webp" alt="Forge Athletic Club" class="logo-img">
+      </a>
+      <p>A private strength, boxing and recovery house — coached, capped, and built to be trained in for years, not months.</p>
+      <div class="contact-social footer-social">
+        <a href="#" class="magnetic"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="magnetic"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="#" class="magnetic"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#" class="magnetic"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="index.html#blog">Blog</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Programs</h4>
+      <a href="services.html">Strength Training</a>
+      <a href="services.html">Boxing &amp; Combat</a>
+      <a href="services.html">Yoga &amp; Recovery</a>
+      <a href="services.html">HIIT Conditioning</a>
+      <a href="services.html">Personal Coaching</a>
+    </div>
+    <div class="footer-col">
+      <h4>Newsletter</h4>
+      <p class="footer-note">One note a month. No spam, no "small tips."</p>
+      <form class="footer-form" onsubmit="return false;">
+        <input type="email" placeholder="Your email">
+        <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2026 Forge Athletic Club. All rights reserved.</p>
+    <div class="footer-legal">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Membership Agreement</a>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top magnetic" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
