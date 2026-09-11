@@ -88,14 +88,23 @@
       <h1 class="bl-hero-title" id="blHeroTitle" data-text="Notes from the floor.">Notes from the floor.</h1>
       <p class="bl-hero-sub">Reading, not tips — dated essays written by the coaches who actually program your week, filed after the block, not before the sale.</p>
 
-      <form class="bl-hero-search" id="blHeroSearch" onsubmit="return false;">
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <input type="text" id="blSearchInput" placeholder="Search a note — try “deload” or “footwork”">
-<button type="submit" onclick="window.location.href='404.html'; return false;">
-    <span>Search</span>
-    <i class="fa-solid fa-arrow-right"></i>
-</button>        <span class="bl-search-line"></span>
-      </form>
+     <form class="bl-hero-search" id="blHeroSearch">
+    <i class="fa-solid fa-magnifying-glass"></i>
+
+    <input 
+        type="text" 
+        id="blSearchInput" 
+        placeholder="Search a note — try “deload” or “footwork”"
+        required
+    >
+
+    <button type="submit">
+        <span>Search</span>
+        <i class="fa-solid fa-arrow-right"></i>
+    </button>
+
+    <span class="bl-search-line"></span>
+</form>
 
       <div class="bl-hero-scroll"><span></span>Start reading</div>
     </div>
@@ -274,26 +283,54 @@
     </div>
   </section>
 
-  <!-- ============ 5. MORE FROM THE DESK — coverflow drag carousel ============ -->
-  <section class="bl-shelf" id="bl-shelf">
-    <div class="section-head">
-      <p class="eyebrow" data-aos="fade-up">Swipe the shelf</p>
-      <h2 data-aos="fade-up" data-aos-delay="100">More from the desk.</h2>
+<!-- ============ 5. MORE FROM THE DESK — pinned note-card stack ============ -->
+<section class="bl-shelf" id="bl-shelf">
+  <div class="section-head">
+    <p class="eyebrow" data-aos="fade-up">From the desk</p>
+    <h2 data-aos="fade-up" data-aos-delay="100">More from the desk.</h2>
+  </div>
+
+  <div class="bl-deck-wrap" data-aos="fade-up" data-aos-delay="150">
+    <div class="bl-deck" id="blDeck">
+      <article class="bl-deck-card">
+        <div class="bl-deck-img"><img src="Assests/fc18_under_100kb.webp" alt="Member focused during a heavy set"></div>
+        <span class="bl-deck-tag">Strength</span>
+        <h4>Chasing a number vs. chasing a pattern</h4>
+        <span class="bl-deck-pin"><i class="fa-solid fa-thumbtack"></i></span>
+      </article>
+      <article class="bl-deck-card">
+        <div class="bl-deck-img"><img src="Assests/fc4_under_100kb.webp" alt="Member resting between sets on the gym bench"></div>
+        <span class="bl-deck-tag">Recovery</span>
+        <h4>Between sets is where the session is won</h4>
+        <span class="bl-deck-pin"><i class="fa-solid fa-thumbtack"></i></span>
+      </article>
+      <article class="bl-deck-card">
+        <div class="bl-deck-img"><img src="Assests/fc3_under_100kb.webp" alt="Athlete on the treadmill during a conditioning session"></div>
+        <span class="bl-deck-tag">Conditioning</span>
+        <h4>Zone 2 is boring on purpose</h4>
+        <span class="bl-deck-pin"><i class="fa-solid fa-thumbtack"></i></span>
+      </article>
+      <article class="bl-deck-card">
+        <div class="bl-deck-img"><img src="Assests/fc6_under_100kb.webp" alt="Recovery and mobility class on the studio floor"></div>
+        <span class="bl-deck-tag">Recovery</span>
+        <h4>Mobility is not a warm-up, it's the work</h4>
+        <span class="bl-deck-pin"><i class="fa-solid fa-thumbtack"></i></span>
+      </article>
+      <article class="bl-deck-card">
+        <div class="bl-deck-img"><img src="Assests/fc11_under_100kb.webp" alt="Close-up of stacked weight plates on the rack"></div>
+        <span class="bl-deck-tag">Strength</span>
+        <h4>Calibrated plates, no excuses</h4>
+        <span class="bl-deck-pin"><i class="fa-solid fa-thumbtack"></i></span>
+      </article>
     </div>
 
-    <div class="bl-coverflow" id="blCoverflow">
-      <button class="bl-cf-nav bl-cf-prev" id="blCfPrev" aria-label="Previous"><i class="fa-solid fa-arrow-left"></i></button>
-      <div class="bl-cf-track" id="blCfTrack">
-        <div class="bl-cf-card"><img src="Assests/fc18_under_100kb.webp" alt="Member focused during a heavy set"><span class="bl-cf-tag">Strength</span><h4>Chasing a number vs. chasing a pattern</h4></div>
-        <div class="bl-cf-card"><img src="Assests/fc19_under_100kb.webp" alt="Member resting between sets on the gym bench"><span class="bl-cf-tag">Recovery</span><h4>Between sets is where the session is won</h4></div>
-        <div class="bl-cf-card"><img src="Assests/fc3_under_100kb.webp" alt="Athlete on the treadmill during a conditioning session"><span class="bl-cf-tag">Conditioning</span><h4>Zone 2 is boring on purpose</h4></div>
-        <div class="bl-cf-card"><img src="Assests/fc6_under_100kb.webp" alt="Recovery and mobility class on the studio floor"><span class="bl-cf-tag">Recovery</span><h4>Mobility is not a warm-up, it's the work</h4></div>
-        <div class="bl-cf-card"><img src="Assests/fc11_under_100kb.webp" alt="Close-up of stacked weight plates on the rack"><span class="bl-cf-tag">Strength</span><h4>Calibrated plates, no excuses</h4></div>
-      </div>
-      <button class="bl-cf-nav bl-cf-next" id="blCfNext" aria-label="Next"><i class="fa-solid fa-arrow-right"></i></button>
+    <div class="bl-deck-controls">
+      <button class="bl-deck-btn" id="blDeckPrev" aria-label="Previous"><i class="fa-solid fa-rotate-left"></i></button>
+      <span class="bl-deck-count"><span id="blDeckCurrent">1</span> / <span id="blDeckTotal">5</span></span>
+      <button class="bl-deck-btn bl-deck-btn-primary" id="blDeckNext">Next note <i class="fa-solid fa-arrow-right"></i></button>
     </div>
-    <div class="bl-cf-dots" id="blCfDots"></div>
-  </section>
+  </div>
+</section>
 
   <!-- ============ 6. AUTHORS — orbiting coach ring ============ -->
   <section class="bl-authors" id="bl-authors">
@@ -347,7 +384,7 @@
       <h2 class="light-heading">The desk, in your inbox.<br><span class="bl-typewriter" id="blTypewriter"></span></h2>
       <p class="bl-sub-desc">No hype, no "5 tips," no NAV-style filler. Just the note, dated, the day a coach actually finishes writing it.</p>
 
-      <<form class="bl-sub-form" id="blSubForm"
+      <form class="bl-sub-form" id="blSubForm"
       onsubmit="window.location.href='404.html'; return false;">
 
     <div class="bl-sub-field">
@@ -438,6 +475,26 @@
     document.getElementById('hamburger').classList.remove('open');
     document.getElementById('navOverlay').classList.remove('show');
     document.body.style.overflow = '';
+  });
+</script>
+
+<script>
+document.getElementById("blHeroSearch").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    if (this.checkValidity()) {
+        window.location.href = "404.html";
+    } else {
+        this.reportValidity();
+    }
+});
+</script>
+<script>
+  window.addEventListener("pageshow", function(event){
+    if (event.persisted) {
+      var searchInput = document.getElementById("blSearchInput");
+      if (searchInput) searchInput.value = "";
+    }
   });
 </script>
 </body>

@@ -676,6 +676,45 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+/* ---------------- SHELF : pinned note-card deck cycle ---------------- */
+const blDeck = document.getElementById('blDeck');
+if (blDeck) {
+  const blDeckCards = () => Array.from(blDeck.querySelectorAll('.bl-deck-card'));
+  const blDeckNext = document.getElementById('blDeckNext');
+  const blDeckPrev = document.getElementById('blDeckPrev');
+  const blDeckCurrent = document.getElementById('blDeckCurrent');
+  const blDeckTotal = document.getElementById('blDeckTotal');
+  const blDeckCount = blDeckCards().length;
+  if (blDeckTotal) blDeckTotal.textContent = blDeckCount;
+
+  let blDeckIndex = 0;
+  function blUpdateDeckCounter(){
+    if (blDeckCurrent) blDeckCurrent.textContent = (((blDeckIndex % blDeckCount) + blDeckCount) % blDeckCount) + 1;
+  }
+  blUpdateDeckCounter();
+
+  function blDeckGoNext(){
+    const cards = blDeckCards();
+    blDeck.appendChild(cards[0]);
+    blDeckIndex++;
+    blUpdateDeckCounter();
+  }
+  function blDeckGoPrev(){
+    const cards = blDeckCards();
+    blDeck.insertBefore(cards[cards.length - 1], blDeck.firstChild);
+    blDeckIndex--;
+    blUpdateDeckCounter();
+  }
+
+  if (blDeckNext) blDeckNext.addEventListener('click', blDeckGoNext);
+  if (blDeckPrev) blDeckPrev.addEventListener('click', blDeckGoPrev);
+
+  blDeck.addEventListener('click', (e) => {
+    const cards = blDeckCards();
+    if (cards[0] && cards[0].contains(e.target)) blDeckGoNext();
+  });
+}
+
   /* ---------------- FEATURED : mouse-follow spotlight + gentle tilt ---------------- */
   const blFeatCard = document.getElementById('blFeatCard');
   const blFeatSpot = document.getElementById('blFeatSpot');
