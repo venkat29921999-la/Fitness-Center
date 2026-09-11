@@ -1,5 +1,5 @@
 /* ==========================================================================
-   FORGE ATHLETIC CLUB — script.js
+   STACKLY ATHLETIC CLUB — script.js
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {

@@ -1,5 +1,5 @@
 /* ==========================================================================
-   FORGE ATHLETIC CLUB — 404 page script (standalone)
+   STACKLY ATHLETIC CLUB — 404 page script (standalone)
    ========================================================================== */
 document.addEventListener('DOMContentLoaded', () => {
 

@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
           name: titleCaseFromEmail(email.value.trim()),
           loginAt: Date.now()
         };
-        localStorage.setItem('forgeSession', JSON.stringify(session));
+        localStorage.setItem('stacklySession', JSON.stringify(session));
         showToast('Welcome back — opening your dashboard');
         setTimeout(() => {
           window.location.href = session.role === 'admin' ? 'dashboard-admin.html' : 'dashboard-user.html';

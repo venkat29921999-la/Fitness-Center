@@ -1,5 +1,5 @@
 /* ==========================================================================
-   FORGE ATHLETIC CLUB — stylesheet
+   STACKLY ATHLETIC CLUB — stylesheet
    Palette: Ink Black / Bone White / Brass Gold (3 colors, tints & shades only)
    ========================================================================== */
 
@@ -263,8 +263,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 .hero-grain{
   position:absolute; inset:0; z-index:2; opacity:.05; mix-blend-mode: overlay; pointer-events:none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-}
+.hero-grain{
+  position:absolute; inset:0; z-index:2; opacity:.05; mix-blend-mode: overlay; pointer-events:none;
+  background-image: url("Assests/noise-grain.webp");
+  background-repeat: repeat;
+}}
 
 .hero-slide-dots{
   position:absolute; z-index:3; left: 34px; bottom: 34px;
@@ -414,6 +417,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   position:relative; border-radius: var(--radius-md); overflow:hidden; grid-column: span 2; grid-row: span 1;
   isolation:isolate;
 }
+
 .program-card-lg{ grid-row: span 2; }
 .program-img{ position:absolute; inset:0; }
 .program-img img{ width:100%; height:100%; object-fit:cover; transition: transform .7s var(--ease); }
@@ -738,6 +742,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   .about-badge-card{ position:static; margin-top: 16px; display:inline-flex; }
   .contact-form{ padding: 30px 24px; }
   section, .about, .why, .programs, .gallery, .membership, .testimonials, .blog, .faq, .contact{ padding-top: 80px; padding-bottom: 80px; }
+}
+
+html{
+  overflow-x: hidden;
+  width: 100%;
 }
 /* ==========================================================================
    ABOUT PAGE — new, page-specific animations (not reused from home)
@@ -1938,4 +1947,35 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   .ct-ticket-stub{ width:auto; flex-direction:row; flex-wrap:wrap; align-items:center; }
   .ct-cta{ padding:110px 20px; }
   .ct-chat-q, .ct-chat-a{ max-width:96%; }
+}
+
+
+/* ---- Full-screen mobile nav (added) ---- */
+@media (max-width: 900px){
+  .main-nav{
+    width: 100vw;
+    right: 0;
+    left: 0;
+    padding: 100px 28px 40px;
+  }
+}
+
+/* ---- Nav close button (added) ---- */
+.nav-close{
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(198,161,91,.12);
+  border: 1px solid rgba(198,161,91,.35);
+  color: var(--gold-2);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+@media (max-width: 900px){
+  .nav-close{ display: flex; }
 }

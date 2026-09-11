@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact — Forge Athletic Club</title>
-<meta name="description" content="Book a floor pass, ask about a coach, or come find us. Call, message, or walk in — Forge Athletic Club's front desk, hours and location.">
+<title>Contact — Stackly Athletic Club</title>
+<meta name="description" content="Book a floor pass, ask about a coach, or come find us. Call, message, or walk in — Stackly Athletic Club's front desk, hours and location.">
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -25,7 +25,7 @@
 <!-- PRELOADER -->
 <div class="preloader" id="preloader">
   <div class="preloader-mark">
-    <span>F</span><span>O</span><span>R</span><span>G</span><span>E</span>
+        <span>S</span><span>T</span><span>A</span><span>C</span><span>K</span><span>L</span><span>Y</span>
   </div>
   <div class="preloader-bar"><div class="preloader-fill" id="preloaderFill"></div></div>
 </div>
@@ -34,10 +34,12 @@
 <header class="site-header" id="siteHeader">
   <div class="header-inner">
     <a href="index.html" class="logo">
-      <img src="Assests/logo-gold.webp" alt="Forge Athletic Club" class="logo-img">
+      <img src="Assests/logo-gold.webp" alt="Stackly Athletic Club" class="logo-img">
     </a>
 
     <nav class="main-nav" id="mainNav">
+            <button class="nav-close" id="navClose" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+
       <div class="nav-pill">
         <a href="index.html" class="nav-link">Home</a>
         <a href="about.html" class="nav-link">About</a>
@@ -46,19 +48,15 @@
         <a href="contact.html" class="nav-link active">Contact</a>
       </div>
       <div class="mobile-nav-foot">
-        <a href="#" class="login-link login-link-mobile">Log in</a>
-        <a href="#ct-form" class="btn btn-gold btn-block">Join Forge</a>
-        <div class="mobile-nav-social">
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-          <a href="#"><i class="fa-brands fa-youtube"></i></a>
-        </div>
+        <a href="login.html" class="login-link login-link-mobile">Log in</a>
+        <a href="signup.html" class="btn btn-gold btn-block">Join Stackly</a>
+        
       </div>
     </nav>
 
     <div class="header-actions">
-      <a href="#" class="login-link">Log in</a>
-      <a href="#ct-form" class="btn btn-gold btn-sm magnetic">Join Forge</a>
+      <a href="login.html" class="login-link">Log in</a>
+      <a href="signup.html" class="btn btn-gold btn-sm magnetic">Join Stackly</a>
       <button class="hamburger" id="hamburger" aria-label="Open menu">
         <span></span><span></span><span></span>
       </button>
@@ -77,8 +75,8 @@
         <h1 class="ct-hero-title">Come say it to<br><span class="ct-shimmer">a real person.</span></h1>
         <p class="ct-hero-sub">No ticket queue, no chatbot loop. Call the desk, message the coach you want, or just walk onto the floor — someone will actually answer.</p>
         <div class="ct-hero-quick">
-          <a href="tel:+15551234567" class="ct-quick-chip"><i class="fa-solid fa-phone"></i>+1 (555) 123-4567</a>
-          <a href="mailto:desk@forgeathletic.club" class="ct-quick-chip"><i class="fa-solid fa-envelope"></i>desk@forgeathletic.club</a>
+          <a href="404.html" class="ct-quick-chip"><i class="fa-solid fa-phone"></i>+1 (555) 123-4567</a>
+          <a href="404.html" class="ct-quick-chip"><i class="fa-solid fa-envelope"></i>desk@stacklyathletic.club</a>
         </div>
         <div class="ct-hero-stats">
           <div class="ct-hero-stat"><strong>&lt;3</strong><span>rings to pick up</span></div>
@@ -122,7 +120,7 @@
         <div class="ct-peel-front">
           <i class="fa-solid fa-envelope"></i>
           <h3>Email the desk</h3>
-          <p>desk@forgeathletic.club</p>
+          <p>desk@stacklyathletic.club</p>
         </div>
         <div class="ct-peel-corner">
           <span>Read by a human, reply inside one business day</span>
@@ -167,7 +165,7 @@
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
           allowfullscreen
-          title="Map showing Forge Athletic Club's location"></iframe>
+          title="Map showing Stackly Athletic Club's location"></iframe>
       </div>
       <div class="ct-map-pin">
         <span class="ct-radar-ring"></span>
@@ -176,7 +174,7 @@
         <span class="ct-pin-dot"><i class="fa-solid fa-dumbbell"></i></span>
       </div>
       <div class="ct-map-card">
-        <span class="ct-map-card-tag">Forge Athletic Club</span>
+        <span class="ct-map-card-tag">Stackly Athletic Club</span>
         <p>412 Foundry Lane, Unit 3<br>Warehouse District</p>
         <a href="https://www.google.com/maps?q=412+Foundry+Lane" target="_blank" rel="noopener" class="ct-map-link">Get directions <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
       </div>
@@ -297,7 +295,7 @@
         <div class="ct-ticket-stub">
           <span>VALID</span>
           <strong>7 DAYS</strong>
-          <a href="#ct-form" class="btn btn-gold magnetic">Claim it</a>
+          <a href="404.html" class="btn btn-gold magnetic">Claim it</a>
         </div>
       </div>
     </div>
@@ -309,15 +307,15 @@
 <footer class="site-footer">
   <div class="footer-top">
     <div class="footer-brand">
-      <a href="index.html" class="logo footer-logo">
-        <img src="Assests/logo-gold.webp" alt="Forge Athletic Club" class="logo-img">
+      <a href="#home" class="logo footer-logo">
+        <img src="Assests/logo-gold.webp" alt="Stackly" class="logo-img">
       </a>
       <p>A private strength, boxing and recovery house — coached, capped, and built to be trained in for years, not months.</p>
       <div class="contact-social footer-social">
-        <a href="#" class="magnetic"><i class="fa-brands fa-instagram"></i></a>
-        <a href="#" class="magnetic"><i class="fa-brands fa-tiktok"></i></a>
-        <a href="#" class="magnetic"><i class="fa-brands fa-youtube"></i></a>
-        <a href="#" class="magnetic"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="404.html" class="magnetic"><i class="fa-brands fa-instagram"></i></a>
+        <a href="404.html" class="magnetic"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="404.html" class="magnetic"><i class="fa-brands fa-youtube"></i></a>
+        <a href="404.html" class="magnetic"><i class="fa-brands fa-whatsapp"></i></a>
       </div>
     </div>
 
@@ -331,28 +329,28 @@
     </div>
     <div class="footer-col">
       <h4>Programs</h4>
-      <a href="services.html">Strength Training</a>
-      <a href="services.html">Boxing &amp; Combat</a>
-      <a href="services.html">Yoga &amp; Recovery</a>
-      <a href="services.html">HIIT Conditioning</a>
-      <a href="services.html">Personal Coaching</a>
+      <a href="404.html">Strength Training</a>
+      <a href="404.html">Boxing &amp; Combat</a>
+      <a href="404.html">Yoga &amp; Recovery</a>
+      <a href="404.html">HIIT Conditioning</a>
+      <a href="404.html">Personal Coaching</a>
     </div>
     <div class="footer-col">
       <h4>Newsletter</h4>
       <p class="footer-note">One note a month. No spam, no "small tips."</p>
-      <form class="footer-form" onsubmit="return false;">
-        <input type="email" placeholder="Your email">
+    <form class="footer-form" onsubmit="if(this.checkValidity()){ window.location.href='404.html'; } else { this.reportValidity(); } return false;">
+        <input type="email" placeholder="Your email" required autocomplete="off">
         <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
       </form>
     </div>
   </div>
 
   <div class="footer-bottom">
-    <p>&copy; 2026 Forge Athletic Club. All rights reserved.</p>
+    <p>&copy; 2026 Stackly Athletic Club. All rights reserved.</p>
     <div class="footer-legal">
-      <a href="#">Privacy</a>
-      <a href="#">Terms</a>
-      <a href="#">Membership Agreement</a>
+      <a href="404.html">Privacy</a>
+      <a href="404.html">Terms</a>
+      <a href="404.html">Membership Agreement</a>
     </div>
   </div>
 </footer>
@@ -364,5 +362,18 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script src="script.js"></script>
+<script>
+  window.addEventListener("pageshow", function(){
+    document.querySelectorAll(".footer-form").forEach(function(f){ f.reset(); });
+  });
+</script>
+<script>
+  document.getElementById('navClose')?.addEventListener('click', function(){
+    document.getElementById('mainNav').classList.remove('open');
+    document.getElementById('hamburger').classList.remove('open');
+    document.getElementById('navOverlay').classList.remove('show');
+    document.body.style.overflow = '';
+  });
+</script>
 </body>
 </html>

@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ---------- session guard ---------- */
   let session = null;
-  try{ session = JSON.parse(localStorage.getItem('forgeSession')); }catch(err){ session = null; }
+  try{ session = JSON.parse(localStorage.getItem('stacklySession')); }catch(err){ session = null; }
 
   if(!session || !session.role){
     window.location.href = 'login.html';
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ---------- logout ---------- */
   document.querySelectorAll('[data-logout]').forEach(btn => {
     btn.addEventListener('click', () => {
-      localStorage.removeItem('forgeSession');
+      localStorage.removeItem('stacklySession');
       window.location.href = 'login.html';
     });
   });
@@ -137,22 +137,22 @@ document.addEventListener('DOMContentLoaded', () => {
       { id: 3, category: 'billing', name: 'Karthik Iyer', subject: 'Question about my renewal invoice', snippet: 'My card was charged twice this month for the strength membership plan.', time: '7:30 AM', unread: false,
         body: "Hi,\n\nMy card was charged twice this month for the strength membership plan. Could you check and refund the duplicate charge?\n\nThanks,\nKarthik" },
       { id: 4, category: 'newsletter', name: 'Newsletter signup', subject: 'New newsletter subscriber', snippet: 'priya.raman@example.com just subscribed to the monthly note.', time: 'Yesterday', unread: false,
-        body: "A new visitor subscribed to the Forge monthly newsletter from the footer form.\n\nEmail: priya.raman@example.com" },
+        body: "A new visitor subscribed to the Stackly monthly newsletter from the footer form.\n\nEmail: priya.raman@example.com" },
       { id: 5, category: 'inquiry', name: 'Farah Qureshi', subject: 'Switching from another gym', snippet: "I've trained for 3 years elsewhere and I'm looking for a more coached environment.", time: 'Yesterday', unread: false,
         body: "Hi,\n\nI've trained for 3 years elsewhere and I'm looking for a more coached environment. Can I book a walk-through this week?\n\nFarah" },
       { id: 6, category: 'billing', name: 'Deepak Nair', subject: 'Requesting a 2-month freeze', snippet: 'I will be travelling for work and would like to freeze my membership.', time: 'Monday', unread: false,
         body: "Hello,\n\nI will be travelling for work starting next month and would like to freeze my membership for two months, effective the 1st.\n\nThanks,\nDeepak" }
     ],
     user: [
-      { id: 1, category: 'billing', name: 'Forge Billing', subject: 'Your September receipt is ready', snippet: 'Your strength membership payment of $149 was processed successfully.', time: 'Today', unread: true,
-        body: "Hi there,\n\nYour strength membership payment of $149 was processed successfully on the 1st. Your next billing date is October 1.\n\nThanks for training with us.\n— Forge Billing" },
+      { id: 1, category: 'billing', name: 'Stackly Billing', subject: 'Your September receipt is ready', snippet: 'Your strength membership payment of $149 was processed successfully.', time: 'Today', unread: true,
+        body: "Hi there,\n\nYour strength membership payment of $149 was processed successfully on the 1st. Your next billing date is October 1.\n\nThanks for training with us.\n— Stackly Billing" },
       { id: 2, category: 'class', name: 'Coach Malik', subject: 'Reminder: Boxing fundamentals at 6 PM', snippet: 'Quick reminder that your boxing class starts at 6 PM today. Bring wraps.', time: '11:20 AM', unread: true,
         body: "Hey,\n\nQuick reminder that your boxing fundamentals class starts at 6 PM today on the main floor. Bring your own wraps if you have them — loaners are available at the desk.\n\nSee you on the floor,\nCoach Malik" },
-      { id: 3, category: 'general', name: 'Forge Athletic Club', subject: 'Welcome to Forge — start here', snippet: 'Your first movement assessment is booked. Here is what to expect.', time: '2 days ago', unread: false,
-        body: "Welcome to Forge,\n\nYour first movement assessment is booked for this week. Come 10 minutes early, wear something you can move in, and bring water.\n\nSee you on the floor." },
+      { id: 3, category: 'general', name: 'Stackly Athletic Club', subject: 'Welcome to Stackly — start here', snippet: 'Your first movement assessment is booked. Here is what to expect.', time: '2 days ago', unread: false,
+        body: "Welcome to Stackly,\n\nYour first movement assessment is booked for this week. Come 10 minutes early, wear something you can move in, and bring water.\n\nSee you on the floor." },
       { id: 4, category: 'class', name: 'Coach Priya', subject: 'Your program has been updated', snippet: 'I reviewed your numbers from last month and adjusted your squat block.', time: '3 days ago', unread: false,
         body: "Hi,\n\nI reviewed your numbers from last month and adjusted your squat block for the next four weeks. Check the board at the desk for the updated sheet.\n\n— Coach Priya" },
-      { id: 5, category: 'general', name: 'Forge Athletic Club', subject: 'The floor is closed Sept 14 for maintenance', snippet: 'We are resurfacing the boxing area on the 14th. All classes are moved.', time: '1 week ago', unread: false,
+      { id: 5, category: 'general', name: 'Stackly Athletic Club', subject: 'The floor is closed Sept 14 for maintenance', snippet: 'We are resurfacing the boxing area on the 14th. All classes are moved.', time: '1 week ago', unread: false,
         body: "Hi,\n\nWe're resurfacing the boxing area on the 14th. All classes that day are moved to the strength room, same times.\n\nThanks for your patience." }
     ]
   };
