@@ -393,7 +393,7 @@
   .auth-visual-stats span{ font-size: .64rem; }
   .auth-form-panel{ padding: 40px 6vw 60px; }
   .auth-card h1{ font-size: 1.7rem; }
-  .role-option span{ display: none; }
+  .role-option i{ display: none; }
   .role-option{ padding: 11px 6px; }
   .auth-toast{ left: 16px; right: 16px; max-width: none; top: 16px; }
 }

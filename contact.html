@@ -199,7 +199,7 @@
         <label for="ctEmail">Email address</label>
       </div>
       <div class="ct-field">
-        <input type="tel" id="ctPhone" placeholder=" ">
+        <input type="tel" id="ctPhone" required placeholder=" ">
         <label for="ctPhone">Phone (optional)</label>
       </div>
       <div class="ct-field">
@@ -214,9 +214,16 @@
         <label for="ctInterest" class="ct-label-static">Which sleeve?</label>
       </div>
       <div class="ct-field ct-field-wide">
-        <textarea id="ctMessage" rows="3" placeholder=" "></textarea>
-        <label for="ctMessage">Anything a coach should know</label>
-      </div>
+  <textarea
+    id="ctMessage"
+    rows="3"
+    placeholder=" "
+    required
+    maxlength="500"
+  ></textarea>
+  <label for="ctMessage">Anything a coach should know</label>
+  <small class="form-error">Please provide at least 10 characters.</small>
+</div>
 
       <button type="submit" class="ct-submit" id="ctSubmit">
         <span class="ct-submit-fill"></span>

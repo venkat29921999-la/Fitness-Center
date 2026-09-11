@@ -1271,8 +1271,8 @@ html{
   .sv-hero-chip{ right:5%; padding:10px 16px; font-size:.72rem; }
   .sv-menu, .sv-process, .sv-pricing, .sv-schedule, .sv-compare, .sv-cta{ padding-top:80px; padding-bottom:80px; }
   .sv-accordion{ flex-direction:column; height:auto; }
-  .sv-acc-panel{ height:86px; flex:none; transition: height .7s var(--ease); }
-  .sv-acc-panel.is-open{ height:280px; }
+  .sv-acc-panel{ height:86px; min-height:86px; flex:none; flex-shrink:0; transition: height .7s var(--ease); }
+  .sv-acc-panel.is-open{ height:280px; min-height:280px; }
   .sv-acc-label{ writing-mode: horizontal-tb !important; transform:none !important; flex-direction:row; align-items:center; gap:12px; bottom:auto; top:50%; transform: translateY(-50%) !important; }
   .sv-acc-panel.is-open .sv-acc-label{ top:20px; transform:none !important; }
   .sv-acc-detail{ bottom:16px; left:16px; right:16px; }
@@ -1281,6 +1281,8 @@ html{
   .sv-schedule-grid{ grid-template-columns:1fr; }
   .sv-compare-table{ font-size:.8rem; }
   .sv-compare-table th, .sv-compare-table td{ padding:12px 8px; }
+  .sv-compare-table thead th{ padding-top:42px; font-size:.9rem; line-height:1.25; }
+  .sv-compare-best::before{ top:8px; font-size:.54rem; padding:3px 8px; white-space:nowrap; }
   .sv-compare-wrap{ overflow-x:auto; }
   .sv-cta{ padding:110px 20px; }
   .sv-blob{ width:280px; height:280px; filter: blur(50px); }
