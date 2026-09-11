@@ -26,7 +26,7 @@
   <aside class="dash-sidebar" id="dashSidebar">
     <button type="button" class="dash-sidebar-close" id="dashSidebarClose" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
     <div class="dash-brand">
-      <a href="index.html" class="auth-logo"><img src="Assests/logo-gold.webp" alt="Forge Athletic Club" class="logo-img"></a>
+      <a href="dashboard-user.html" class="auth-logo"><img src="Assests/logo-gold.webp" alt="Forge Athletic Club" class="logo-img"></a>
     </div>
 
     <span class="dash-role-badge"><i class="fa-solid fa-user"></i> Member floor</span>
@@ -53,10 +53,10 @@
     <header class="dash-topbar">
       <button class="dash-menu-btn" id="dashMenuBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
 
-      <div class="dash-search">
+      <!-- <div class="dash-search">
         <i class="fa-solid fa-magnifying-glass"></i>
         <input type="text" placeholder="Search classes, coaches, messages…">
-      </div>
+      </div> -->
 
       <div class="dash-topbar-actions">
         <a href="#inbox" class="dash-bell" aria-label="Notifications">
@@ -263,8 +263,13 @@
             <strong>Visa ending in 4821</strong>
             <span>Expires 09/28</span>
           </div>
-          <button type="button" class="payment-update-btn" data-update-payment>Update payment method</button>
-        </div>
+<button 
+  type="button" 
+  class="payment-update-btn" 
+  data-update-payment
+  onclick="window.location.href='404.html'">
+  Update payment method
+</button>        </div>
 
         <div class="dash-divider"></div>
 
@@ -342,7 +347,10 @@
           <label class="switch"><input type="checkbox"><span class="switch-track"></span></label>
         </div>
 
-        <button type="button" class="dash-save-btn" data-save-settings><i class="fa-solid fa-floppy-disk"></i> Save changes</button>
+<button type="button" class="dash-save-btn" data-save-settings 
+        onclick="window.location.href='404.html'">
+    <i class="fa-solid fa-floppy-disk"></i> Save changes
+</button>
 
         <div class="dash-subhead"><h3>Security</h3><span></span></div>
         <div class="switch-row">
@@ -365,8 +373,12 @@
             <h3>Freeze membership</h3>
             <p>Pause billing and class access for up to two months a year.</p>
           </div>
-          <button type="button" class="danger-btn" data-danger-action="This is a demo — your membership was not changed"><i class="fa-solid fa-snowflake"></i> Freeze</button>
-        </div>
+<button type="button" 
+        class="danger-btn" 
+        data-danger-action="This is a demo — your membership was not changed"
+        onclick="window.location.href='404.html'">
+    <i class="fa-solid fa-snowflake"></i> Freeze
+</button>        </div>
       </div>
     </section>
 

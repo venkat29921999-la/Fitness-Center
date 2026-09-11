@@ -53,10 +53,10 @@
     <header class="dash-topbar">
       <button class="dash-menu-btn" id="dashMenuBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
 
-      <div class="dash-search">
+      <!-- <div class="dash-search">
         <i class="fa-solid fa-magnifying-glass"></i>
         <input type="text" placeholder="Search members, classes, messages…">
-      </div>
+      </div> -->
 
       <div class="dash-topbar-actions">
         <a href="#inbox" class="dash-bell" aria-label="Notifications">
@@ -120,11 +120,30 @@
           <p>Common tasks, one tap away</p>
         </div>
         <div class="quick-actions">
-          <button type="button" class="quick-action-btn" data-quick-action="Member added — demo only"><i class="fa-solid fa-user-plus"></i> Add member</button>
-          <button type="button" class="quick-action-btn" data-quick-action="Class created — demo only"><i class="fa-solid fa-calendar-plus"></i> Create class</button>
-          <button type="button" class="quick-action-btn" data-quick-action="Announcement queued — demo only"><i class="fa-solid fa-bullhorn"></i> Send announcement</button>
-          <button type="button" class="quick-action-btn" data-quick-action="Report exported — demo only"><i class="fa-solid fa-file-export"></i> Export report</button>
-        </div>
+         <button type="button" class="quick-action-btn" 
+        data-quick-action="Member added — demo only"
+        onclick="window.location.href='404.html'">
+    <i class="fa-solid fa-user-plus"></i> Add member
+</button>
+
+<button type="button" class="quick-action-btn" 
+        data-quick-action="Class created — demo only"
+        onclick="window.location.href='404.html'">
+    <i class="fa-solid fa-calendar-plus"></i> Create class
+</button>
+
+<button type="button" class="quick-action-btn" 
+        data-quick-action="Announcement queued — demo only"
+        onclick="window.location.href='404.html'">
+    <i class="fa-solid fa-bullhorn"></i> Send announcement
+</button>
+
+<button type="button" class="quick-action-btn" 
+        data-quick-action="Report exported — demo only"
+        onclick="window.location.href='404.html'">
+    <i class="fa-solid fa-file-export"></i> Export report
+</button>
+ </div>
 
         <div class="dash-subhead"><h3>Today's schedule</h3><span>6 sessions</span></div>
         <div class="schedule-list">
@@ -469,7 +488,12 @@
             <h3>Deactivate admin access</h3>
             <p>Revokes console access for this account. Another admin will need to restore it.</p>
           </div>
-          <button type="button" class="danger-btn" data-danger-action="This is a demo — access was not changed"><i class="fa-solid fa-triangle-exclamation"></i> Deactivate</button>
+<button type="button" 
+        class="danger-btn" 
+        data-danger-action="This is a demo — access was not changed"
+        onclick="window.location.href='404.html'">
+    <i class="fa-solid fa-triangle-exclamation"></i> Deactivate
+</button>
         </div>
       </div>
     </section>

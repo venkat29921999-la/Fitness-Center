@@ -251,13 +251,16 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="inbox-detail">
             <p>${item.body.replace(/\n/g, '<br>')}</p>
             <div class="inbox-actions">
-              <button type="button" class="inbox-action-btn" data-action="toggle-read">
-                <i class="fa-solid ${item.unread ? 'fa-envelope-open' : 'fa-envelope'}"></i>
-                Mark as ${item.unread ? 'read' : 'unread'}
-              </button>
-              <button type="button" class="inbox-action-btn" data-action="archive">
-                <i class="fa-solid fa-box-archive"></i> Archive
-              </button>
+              <button type="button" class="inbox-action-btn" data-action="toggle-read"
+        onclick="window.location.href='404.html'">
+    <i class="fa-solid ${item.unread ? 'fa-envelope-open' : 'fa-envelope'}"></i>
+    Mark as ${item.unread ? 'read' : 'unread'}
+</button>
+
+<button type="button" class="inbox-action-btn" data-action="archive"
+        onclick="window.location.href='404.html'">
+    Archive
+</button>
             </div>
           </div>`;
 
