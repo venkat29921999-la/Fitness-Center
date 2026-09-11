@@ -20,7 +20,7 @@
 /* ---------- Shell ---------- */
 .dash-shell{
   display: grid;
-  grid-template-columns: var(--sidebar-w) minmax(0,1fr);
+  grid-template-columns: 1fr;
   min-height: 100vh;
 }
 
@@ -41,7 +41,7 @@
   border-right: 1px solid rgba(var(--gold-rgb),.12);
   padding: 26px 20px 22px;
   display: flex; flex-direction: column; gap: 26px;
-  position: sticky; top: 0; height: 100vh; overflow-y: auto;
+  position: fixed; top: 0; left: 0; width: var(--sidebar-w); height: 100vh; overflow-y: auto;
 }
 .dash-sidebar::-webkit-scrollbar{ width: 5px; }
 .dash-sidebar::-webkit-scrollbar-thumb{ background: rgba(var(--gold-rgb),.25); border-radius: 4px; }
@@ -119,6 +119,7 @@
 /* ---------- Content ---------- */
 .dash-content{
   min-width: 0;
+  margin-left: var(--sidebar-w);
   padding: 26px clamp(18px, 3vw, 40px) 70px;
 }
 
@@ -668,6 +669,7 @@
    ============================================================ */
 @media (max-width: 1024px){
   .dash-shell{ grid-template-columns: 1fr; }
+  .dash-content{ margin-left: 0; }
   .dash-sidebar{
     position: fixed; z-index: 50; top: 0; left: 0;
     width: min(280px, 82vw); height: 100vh;
