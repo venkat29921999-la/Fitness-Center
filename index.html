@@ -71,7 +71,7 @@
   <section class="hero">
     <div class="hero-media">
       <img class="hero-slide is-active" src="Assests/fc1_under_100kb.webp" alt="Determined athlete lifting a heavy barbell inside Stackly's urban strength room" id="heroImg">
-      <img class="hero-slide" src="Assests/fc2_under_100kb.webp" alt="Member deadlifting a loaded barbell, showcasing strength and form">
+      <img class="hero-slide" src="Assests/fc2_final_under_100kb.webp" alt="Member deadlifting a loaded barbell, showcasing strength and form">
       <img class="hero-slide" src="Assests/fc3_under_100kb.webp" alt="Athlete on the treadmill during a conditioning session">
       <img class="hero-slide" src="Assests/fc4_under_100kb.webp" alt="Silhouette of a boxer training with hanging bags at dusk">
       <div class="hero-gradient"></div>
@@ -254,7 +254,7 @@
       </a>
 
       <a href="404.html" class="program-card tilt-card" data-aos="fade-up" data-aos-delay="300">
-        <div class="program-img"><img src="https://images.pexels.com/photos/1954524/pexels-photo-1954524.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Athlete on a treadmill during a high intensity conditioning circuit"></div>
+        <div class="program-img"><img src="Assests/fc11_under_100kb.webp" alt="Athlete on a treadmill during a high intensity conditioning circuit"></div>
         <div class="program-overlay">
           <span class="program-tag">04 · Conditioning bay</span>
           <h3>HIIT Conditioning</h3>
@@ -568,9 +568,17 @@
           </select>
         </div>
         <div class="form-field">
-          <label>Tell us about your goal</label>
-          <textarea name="goal" rows="4" placeholder="What are you training for?"></textarea>
-        </div>
+  <label for="goal">Tell us about your goal</label>
+  <textarea
+    id="goal"
+    name="goal"
+    rows="4"
+    placeholder="What are you training for?"
+    required
+    maxlength="500"
+  ></textarea>
+  <small class="form-error">Please tell us about your goal (at least 10 characters).</small>
+</div>
         <button type="submit" class="btn btn-gold btn-block magnetic" id="ctSubmit">
           <span id="formBtnText">Book a walk-through</span><i class="fa-solid fa-arrow-right"></i>
         </button>
